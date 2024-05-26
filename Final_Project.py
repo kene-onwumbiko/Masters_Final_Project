@@ -8,7 +8,6 @@ Created on Sun May 26 14:55:26 2024
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-import plotly.graph_objects as go
 
 # Import the dataset
 sep_2020_applications = pd.read_excel(r"C:\Users\keneo\Downloads\Data and Software\Overview_FullData_For_4_Academic_Years - 30 October  2023 - 2020.xlsx",
@@ -79,26 +78,69 @@ new_sep_2020_acceptance = new_sep_2020_acceptance.apply(modify_date_category, ax
 on_values = ["Campus", "Group", "School / Department", "Level", "Category", "Date"]
 sep_2020 = new_sep_2020_applications.merge(new_sep_2020_acceptance, on = on_values, how = "outer")
 
+
 # Plot linechat
 plt.figure(figsize = (15, 10))
-# plt.plot(sep_2020["Date"], sep_2020["Number of Applicants"], "-g")
-# plt.plot(sep_2020["Date"], sep_2020["Number of Acceptances"], "-r")
-# plt.plot("Date", "Number of Applicants", data = sep_2020, marker = "o", 
-#          markerfacecolor = "darkgreen", color = "green", linewidth = 2)
-
-plt.bar(sep_2020["Date"], sep_2020["Number of Applicants"], color = "green")
-plt.bar(sep_2020["Date"], sep_2020["Number of Acceptances"], color = "red")
+bar1 = plt.bar(data = sep_2020,
+               x = "Date",
+               height = "Number of Acceptances", 
+               width = 0.3)
+bar2 = plt.bar(data = sep_2020,
+                x = "Date" + 0.3,
+                height = "Number of Acceptances", 
+                width = 0.3)
 plt.show()
 
-fig = go.Figure()
-fig = go.Figure(data = [go.Bar(x = sep_2020["Date"],y = sep_2020["Number of Applicants"])])
-fig.show()
+
+# plt.figure(figsize = (15, 10))
+# plt.title("Proportion of Medals by Season")
+# bar1 = plt.bar(data = winter_data,
+#                x = count,
+#                height = "Percentage", 
+#                width = 0.3)
+# bar2 = plt.bar(data = summer_data,
+#                x = count + 0.3,
+#                height = "Percentage", 
+#                width = 0.3)
+# plt.ylabel("Percentage of medals (%)")
+# plt.yticks(np.linspace(0, 90, 10))
+# plt.xticks(((count + (count + 0.3)) / 2), labels = x_labels)
+# plt.legend(["Winter", "Summer"])
+# plt.show()
 
 
+# Create an array of unique dates
+dates = sep_2020['Date'].unique()
 
+# Calculate the width of each bar
+bar_width = 0.3
 
+# Positions for the bars
+positions1 = dates - bar_width/2
+positions2 = dates + bar_width/2
 
+# Filter data for Home and Overseas categories
+home_data = sep_2020[sep_2020['Category'] == 'Home']
+overseas_data = sep_2020[sep_2020['Category'] == 'Overseas']
 
+# Plotting
+plt.figure(figsize=(15, 10))
+
+bar1 = plt.bar(home_data['Date'] - bar_width/2,
+               home_data['Number of Applicants'],
+               width=bar_width,
+               label='Home')
+
+bar2 = plt.bar(overseas_data['Date'] + bar_width/2,
+               overseas_data['Number of Applicants'],
+               width=bar_width,
+               label='Overseas')
+
+plt.xlabel('Date')
+plt.ylabel('Number of Acceptances')
+plt.title('Number of Acceptances by Date')
+plt.legend()
+plt.show()
 
 
 
