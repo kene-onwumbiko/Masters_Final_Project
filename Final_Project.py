@@ -94,3 +94,15 @@ fig = go.Figure()
 fig = go.Figure(data = [go.Bar(x = sep_2020["Date"],y = sep_2020["Number of Applicants"])])
 fig.show()
 
+
+
+
+
+
+
+
+
+
+
+
+
