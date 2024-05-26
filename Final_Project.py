@@ -20,7 +20,7 @@ value_vars = ["Home", "Overseas", "Unknown", "Home.1", "Overseas.1", "Unknown.1"
 
 new_sep_2020_applications = sep_2020_applications.melt(id_vars = id_vars, value_vars = value_vars, 
                                                        var_name = "Category", 
-                                                       value_name = "Number of Students")
+                                                       value_name = "Number of Applicants")
 
 # Create a function to determine the date based on "Category" and also modify "Category"
 def modify_date_category(row):
@@ -70,14 +70,21 @@ sep_2020_acceptance = pd.read_excel(r"C:\Users\keneo\Downloads\Data and Software
 
 new_sep_2020_acceptance = sep_2020_acceptance.melt(id_vars = id_vars, value_vars = value_vars, 
                                                    var_name = "Category", 
-                                                   value_name = "Number of Students")
+                                                   value_name = "Number of Acceptances")
 
 # Apply the function to the "new_sep_2020_acceptance"
 new_sep_2020_acceptance = new_sep_2020_acceptance.apply(modify_date_category, axis = 1)
 
+on_values = ["Campus", "Group", "School / Department", "Level", "Category", "Date"]
+sep_2020 = new_sep_2020_applications.merge(new_sep_2020_acceptance, on = on_values, how = "outer")
 
-
-
+# Plot linechat
+plt.figure(figsize = (15, 10))
+# plt.plot(sep_2020["Date"], sep_2020["Number of Applicants"], "-g")
+# plt.plot(sep_2020["Date"], sep_2020["Number of Acceptances"], "-r")
+plt.plot("Date", "Number of Applicants", data = sep_2020, marker = "o", 
+         markerfacecolor = "darkgreen", color = "green", linewidth = 2)
+plt.show()
 
 
 
