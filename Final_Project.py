@@ -9,17 +9,18 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Import the data
-sep_2020 = pd.read_excel(r"C:\Users\keneo\Downloads\Data and Software\Overview_FullData_For_4_Academic_Years - 30 October  2023 - 2020.xlsx",
-                         sheet_name = "Sheet2_New_Applications_2")
+# Import the dataset
+sep_2020_applications = pd.read_excel(r"C:\Users\keneo\Downloads\Data and Software\Overview_FullData_For_4_Academic_Years - 30 October  2023 - 2020.xlsx",
+                                      sheet_name = "Sheet2_New_Applications_2")
 
-# Unpivot the DataFrame
+# Unpivot the dataset
 id_vars = ["Campus", "Group", "School / Department", "Level"]
 value_vars = ["Home", "Overseas", "Unknown", "Home.1", "Overseas.1", "Unknown.1", "Home.2", 
               "Overseas.2", "Unknown.2", "Home.3", "Overseas.3", "Unknown.3"]
 
-unpivoted_sep_2020 = sep_2020.melt(id_vars=id_vars, value_vars=value_vars, 
-                                   var_name='Category', value_name='Number of Students')
+new_sep_2020_applications = sep_2020_applications.melt(id_vars = id_vars, value_vars = value_vars, 
+                                                       var_name = "Category", 
+                                                       value_name = "Number of Students")
 
 # Create a function to determine the date based on "Category" and also modify "Category"
 def modify_date_category(row):
@@ -59,15 +60,20 @@ def modify_date_category(row):
         row["Category"] = "Unknown"
     return row
 
-# Apply the function to the "unpivoted_sep_2020"
-unpivoted_sep_2020 = unpivoted_sep_2020.apply(modify_date_category, axis = 1)
+# Apply the function to the "new_sep_2020_applications"
+new_sep_2020_applications = new_sep_2020_applications.apply(modify_date_category, axis = 1)
 
 
+# Import the dataset
+sep_2020_acceptance = pd.read_excel(r"C:\Users\keneo\Downloads\Data and Software\Overview_FullData_For_4_Academic_Years - 30 October  2023 - 2020.xlsx",
+                                    sheet_name = "Sheet2_New_Acceptance_2")
 
+new_sep_2020_acceptance = sep_2020_acceptance.melt(id_vars = id_vars, value_vars = value_vars, 
+                                                   var_name = "Category", 
+                                                   value_name = "Number of Students")
 
-
-
-
+# Apply the function to the "new_sep_2020_acceptance"
+new_sep_2020_acceptance = new_sep_2020_acceptance.apply(modify_date_category, axis = 1)
 
 
 
