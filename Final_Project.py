@@ -82,8 +82,11 @@ sep_2020 = new_sep_2020_applications.merge(new_sep_2020_acceptance, on = on_valu
 plt.figure(figsize = (15, 10))
 # plt.plot(sep_2020["Date"], sep_2020["Number of Applicants"], "-g")
 # plt.plot(sep_2020["Date"], sep_2020["Number of Acceptances"], "-r")
-plt.plot("Date", "Number of Applicants", data = sep_2020, marker = "o", 
-         markerfacecolor = "darkgreen", color = "green", linewidth = 2)
+# plt.plot("Date", "Number of Applicants", data = sep_2020, marker = "o", 
+#          markerfacecolor = "darkgreen", color = "green", linewidth = 2)
+
+plt.bar(sep_2020["Date"], sep_2020["Number of Applicants"], color = "green")
+plt.bar(sep_2020["Date"], sep_2020["Number of Acceptances"], color = "red")
 plt.show()
 
 
