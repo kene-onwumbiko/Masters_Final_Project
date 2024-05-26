@@ -8,6 +8,7 @@ Created on Sun May 26 14:55:26 2024
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+import plotly.graph_objects as go
 
 # Import the dataset
 sep_2020_applications = pd.read_excel(r"C:\Users\keneo\Downloads\Data and Software\Overview_FullData_For_4_Academic_Years - 30 October  2023 - 2020.xlsx",
@@ -89,5 +90,7 @@ plt.bar(sep_2020["Date"], sep_2020["Number of Applicants"], color = "green")
 plt.bar(sep_2020["Date"], sep_2020["Number of Acceptances"], color = "red")
 plt.show()
 
-
+fig = go.Figure()
+fig = go.Figure(data = [go.Bar(x = sep_2020["Date"],y = sep_2020["Number of Applicants"])])
+fig.show()
 
