@@ -22,7 +22,7 @@ new_sep_2020_applications = sep_2020_applications.melt(id_vars = id_vars, value_
                                                        var_name = "Category", 
                                                        value_name = "Number of Applicants")
 
-# Create a function to determine the date based on "Category" and also modify "Category"
+# Create a function to get the Date based on "Category" and also modify "Category"
 def modify_date_category(row):
     category = row["Category"]
     if category == "Home":
@@ -81,41 +81,11 @@ on_values = ["Campus", "Group", "School / Department", "Level", "Category", "Dat
 sep_2020 = new_sep_2020_applications.merge(new_sep_2020_acceptance, on = on_values, how = "outer")
 
 
-# # Plot linechat
-# plt.figure(figsize = (15, 10))
-# bar1 = plt.bar(data = sep_2020,
-#                x = "Date",
-#                height = "Number of Acceptances", 
-#                width = 0.3)
-# bar2 = plt.bar(data = sep_2020,
-#                 x = "Date" + 0.3,
-#                 height = "Number of Acceptances", 
-#                 width = 0.3)
-# plt.show()
-
-
-# plt.figure(figsize = (15, 10))
-# plt.title("Proportion of Medals by Season")
-# bar1 = plt.bar(data = winter_data,
-#                x = count,
-#                height = "Percentage", 
-#                width = 0.3)
-# bar2 = plt.bar(data = summer_data,
-#                x = count + 0.3,
-#                height = "Percentage", 
-#                width = 0.3)
-# plt.ylabel("Percentage of medals (%)")
-# plt.yticks(np.linspace(0, 90, 10))
-# plt.xticks(((count + (count + 0.3)) / 2), labels = x_labels)
-# plt.legend(["Winter", "Summer"])
-# plt.show()
-
-
 
 
 
 # # Create an array of unique dates
-# dates = sep_2020['Date'].unique()
+# dates = sep_2020["Date"].unique()
 
 # # Calculate the width of each bar
 # bar_width = 0.3
@@ -124,57 +94,41 @@ sep_2020 = new_sep_2020_applications.merge(new_sep_2020_acceptance, on = on_valu
 # positions1 = dates - bar_width/2
 # positions2 = dates + bar_width/2
 
-# # Filter data for Home and Overseas categories
-# home_data = sep_2020[sep_2020['Category'] == 'Home']
-# overseas_data = sep_2020[sep_2020['Category'] == 'Overseas']
-
-# # Plotting
-# plt.figure(figsize=(15, 10))
-
-# bar1 = plt.bar(home_data['Date'] - bar_width/2,
-#                home_data['Number of Applicants'],
-#                width=bar_width,
-#                label='Home')
-
-# bar2 = plt.bar(overseas_data['Date'] + bar_width/2,
-#                overseas_data['Number of Applicants'],
-#                width=bar_width,
-#                label='Overseas')
-
-# plt.xlabel('Date')
-# plt.ylabel('Number of Acceptances')
-# plt.title('Number of Acceptances by Date')
-# plt.legend()
-# plt.show()
-
-
-
-
-
-# Create an array of unique dates
-dates = sep_2020['Date'].unique()
-
-# Calculate the width of each bar
-bar_width = 0.3
-
-# Positions for the bars
-positions1 = dates - bar_width/2
-positions2 = dates + bar_width/2
-
-# Filter the dataset for Home and Overseas categories
+# Filter the dataset to get the Home and Overseas categories
 home = sep_2020[sep_2020["Category"] == "Home"]
 overseas = sep_2020[sep_2020["Category"] == "Overseas"]
 
-# Plot the bar chart
-plt.figure(figsize = (15, 10))
-bar1 = plt.bar(home["Date"] - bar_width/2,
+# Plot the Barchart
+plt.figure(figsize = (20, 10))
+plt.suptitle("Number of Applications VS Number of Acceptances")
+
+# Applications Barchart
+plt.subplot(1, 2, 1)
+bar_1 = plt.bar(home["Date"] - 0.3/2,
                home["Number of Applicants"],
-               width = bar_width,
+               width = 0.3,
                label = "Home")
 
-bar2 = plt.bar(overseas["Date"] + bar_width/2,
+bar_2 = plt.bar(overseas["Date"] + 0.3/2,
                overseas["Number of Applicants"],
-               width = bar_width,
+               width = 0.3,
+               label = "Overseas")
+
+plt.xlabel("Date")
+plt.ylabel("Number of Applicants")
+plt.title("Number of Applications by Date")
+plt.legend()
+
+# Acceptance Barchart
+plt.subplot(1, 2, 2)
+bar_3 = plt.bar(home["Date"] - 0.3/2,
+               home["Number of Acceptances"],
+               width = 0.3,
+               label = "Home")
+
+bar_4 = plt.bar(overseas["Date"] + 0.3/2,
+               overseas["Number of Acceptances"],
+               width = 0.3,
                label = "Overseas")
 
 plt.xlabel("Date")
@@ -182,7 +136,6 @@ plt.ylabel("Number of Acceptances")
 plt.title("Number of Acceptances by Date")
 plt.legend()
 plt.show()
-
 
 
 
