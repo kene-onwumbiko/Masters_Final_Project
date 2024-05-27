@@ -8,6 +8,8 @@ Created on Sun May 26 14:55:26 2024
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+from plotly.offline import plot
+import plotly.express as px
 
 # Import the applications dataset
 sep_2020_applications = pd.read_excel(r"C:\Users\keneo\Downloads\Data and Software\Overview_FullData_For_4_Academic_Years - 30 October  2023 - 2020.xlsx",
@@ -136,6 +138,14 @@ plt.ylabel("Number of Acceptances")
 plt.title("Number of Acceptances by Date")
 plt.legend()
 plt.show()
+
+
+# fig = px.bar(sep_2020, x = "Date", y = "Number of Acceptances", color = "Category", barmode = "group")
+# fig.show(renderer="png")
+
+
+
+
 
 
 
