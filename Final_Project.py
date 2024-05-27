@@ -9,11 +9,11 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Import the dataset
+# Import the applications dataset
 sep_2020_applications = pd.read_excel(r"C:\Users\keneo\Downloads\Data and Software\Overview_FullData_For_4_Academic_Years - 30 October  2023 - 2020.xlsx",
                                       sheet_name = "Sheet2_New_Applications_2")
 
-# Unpivot the dataset
+# Unpivot the applications dataset
 id_vars = ["Campus", "Group", "School / Department", "Level"]
 value_vars = ["Home", "Overseas", "Unknown", "Home.1", "Overseas.1", "Unknown.1", "Home.2", 
               "Overseas.2", "Unknown.2", "Home.3", "Overseas.3", "Unknown.3"]
@@ -60,36 +60,38 @@ def modify_date_category(row):
         row["Category"] = "Unknown"
     return row
 
-# Apply the function to the "new_sep_2020_applications"
+# Apply the function to the applications dataset
 new_sep_2020_applications = new_sep_2020_applications.apply(modify_date_category, axis = 1)
 
 
-# Import the dataset
+# Import the acceptance dataset
 sep_2020_acceptance = pd.read_excel(r"C:\Users\keneo\Downloads\Data and Software\Overview_FullData_For_4_Academic_Years - 30 October  2023 - 2020.xlsx",
                                     sheet_name = "Sheet2_New_Acceptance_2")
 
+# Unpivot the acceptance dataset
 new_sep_2020_acceptance = sep_2020_acceptance.melt(id_vars = id_vars, value_vars = value_vars, 
                                                    var_name = "Category", 
                                                    value_name = "Number of Acceptances")
 
-# Apply the function to the "new_sep_2020_acceptance"
+# Apply the function to the acceptance dataset
 new_sep_2020_acceptance = new_sep_2020_acceptance.apply(modify_date_category, axis = 1)
 
+# Merge the applications and acceptance datasets
 on_values = ["Campus", "Group", "School / Department", "Level", "Category", "Date"]
 sep_2020 = new_sep_2020_applications.merge(new_sep_2020_acceptance, on = on_values, how = "outer")
 
 
-# Plot linechat
-plt.figure(figsize = (15, 10))
-bar1 = plt.bar(data = sep_2020,
-               x = "Date",
-               height = "Number of Acceptances", 
-               width = 0.3)
-bar2 = plt.bar(data = sep_2020,
-                x = "Date" + 0.3,
-                height = "Number of Acceptances", 
-                width = 0.3)
-plt.show()
+# # Plot linechat
+# plt.figure(figsize = (15, 10))
+# bar1 = plt.bar(data = sep_2020,
+#                x = "Date",
+#                height = "Number of Acceptances", 
+#                width = 0.3)
+# bar2 = plt.bar(data = sep_2020,
+#                 x = "Date" + 0.3,
+#                 height = "Number of Acceptances", 
+#                 width = 0.3)
+# plt.show()
 
 
 # plt.figure(figsize = (15, 10))
