@@ -144,6 +144,17 @@ plt.show()
 # fig.show(renderer="png")
 
 
+fig= px.scatter(sep_2020, x="Date", y="Number of Applicants",
+                color="School / Department",
+                size="Category", size_max=55,
+                hover_name="School / Department",
+                animation_frame="Date", 
+                animation_group="School / Department",
+                log_x=True,range_x=[100,100000], range_y=[25,90])
+                # x_range and y_range to ensure that data remains visible throughout the animation
+# save and open the output as html
+fig.write_html('lifeExp4.html', auto_open=True)
+
 
 
 
