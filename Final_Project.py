@@ -101,8 +101,91 @@ sep_2020_undergrad_computing = sep_2020_undergrad[sep_2020_undergrad["School / D
 
 
 
+# Initialize the Dash app
+app = dash.Dash(__name__)
 
+# Layout of the app
+app.layout = html.Div([
+    html.H1("University Admissions Dashboard"),
+    
+    # Dropdown for filtering by Group
+    html.Label("Select Group:"),
+    dcc.RadioItems(
+        id='group-filter',
+        options=[{'label': group, 'value': group} for group in sep_2020['Group'].unique()],
+        value=sep_2020['Group'].unique()[0]
+    ),
+    
+    # Dropdown for filtering by School / Department
+    html.Label("Select School / Department:"),
+    dcc.RadioItems(
+        id='school-filter',
+        options=[{'label': school, 'value': school} for school in sep_2020['School / Department'].unique()],
+        value=sep_2020['School / Department'].unique()[0]
+    ),
+    
+    # Dropdown for filtering by Level
+    html.Label("Select Level:"),
+    dcc.RadioItems(
+        id='level-filter',
+        options=[{'label': level, 'value': level} for level in sep_2020['Level'].unique()],
+        value=sep_2020['Level'].unique()[0]
+    ),
+    
+    # Dropdown for filtering by Category
+    html.Label("Select Category:"),
+    dcc.RadioItems(
+        id='category-filter',
+        options=[{'label': category, 'value': category} for category in sep_2020['Category'].unique()],
+        value=sep_2020['Category'].unique()[0]
+    ),
+    
+    # Line graph
+    dcc.Graph(id='line-graph')
+])
 
+# Callback to update the graph based on selected filters
+@app.callback(
+    Output('line-graph', 'figure'),
+    [Input('group-filter', 'value'),
+     Input('school-filter', 'value'),
+     Input('level-filter', 'value'),
+     Input('category-filter', 'value')]
+)
+def update_graph(selected_group, selected_school, selected_level, selected_category):
+    filtered_df = sep_2020[
+        (sep_2020['Group'] == selected_group) &
+        (sep_2020['School / Department'] == selected_school) &
+        (sep_2020['Level'] == selected_level) &
+        (sep_2020['Category'] == selected_category)
+    ]
+    
+    trace1 = go.Scatter(
+        x=filtered_df['Date'],
+        y=filtered_df['Number of Applicants'],
+        mode='lines+markers',
+        name='Number of Applicants'
+    )
+    
+    trace2 = go.Scatter(
+        x=filtered_df['Date'],
+        y=filtered_df['Number of Acceptances'],
+        mode='lines+markers',
+        name='Number of Acceptances'
+    )
+    
+    return {
+        'data': [trace1, trace2],
+        'layout': go.Layout(
+            title='Number of Applicants and Acceptances Over Time',
+            xaxis={'title': 'Date'},
+            yaxis={'title': 'Count'},
+            hovermode='closest'
+        )
+    }
+
+# Run the server
+app.run_server(debug = True, port = 8050, use_reloader = False)
 
 
 
