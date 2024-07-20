@@ -86,8 +86,8 @@ sep_2020 = new_sep_2020_applications.merge(new_sep_2020_acceptance, on = on_valu
 
 
 
-
-
+sep_2020_undergrad = sep_2020[sep_2020["Level"] == "Undergraduate"]
+sep_2020_undergrad_computing = sep_2020_undergrad[sep_2020_undergrad["School / Department"] == "School of Computing"]
 
 
 
