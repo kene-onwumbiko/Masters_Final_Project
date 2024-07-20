@@ -110,7 +110,7 @@ app.layout = html.Div([
     
     # Dropdown for filtering by Group
     html.Label("Select Group:"),
-    dcc.RadioItems(
+    dcc.Dropdown(
         id='group-filter',
         options=[{'label': group, 'value': group} for group in sep_2020['Group'].unique()],
         value=sep_2020['Group'].unique()[0]
@@ -118,7 +118,7 @@ app.layout = html.Div([
     
     # Dropdown for filtering by School / Department
     html.Label("Select School / Department:"),
-    dcc.RadioItems(
+    dcc.Dropdown(
         id='school-filter',
         options=[{'label': school, 'value': school} for school in sep_2020['School / Department'].unique()],
         value=sep_2020['School / Department'].unique()[0]
@@ -126,7 +126,7 @@ app.layout = html.Div([
     
     # Dropdown for filtering by Level
     html.Label("Select Level:"),
-    dcc.RadioItems(
+    dcc.Dropdown(
         id='level-filter',
         options=[{'label': level, 'value': level} for level in sep_2020['Level'].unique()],
         value=sep_2020['Level'].unique()[0]
@@ -134,7 +134,7 @@ app.layout = html.Div([
     
     # Dropdown for filtering by Category
     html.Label("Select Category:"),
-    dcc.RadioItems(
+    dcc.Dropdown(
         id='category-filter',
         options=[{'label': category, 'value': category} for category in sep_2020['Category'].unique()],
         value=sep_2020['Category'].unique()[0]
