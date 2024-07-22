@@ -5,3 +5,26 @@ Created on Sat Jul 20 17:09:09 2024
 @author: keneo
 """
 
+# Import libraries
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import dash
+from dash import html, dcc, Input, Output
+import plotly.express as px
+import plotly.graph_objects as go
+from plotly.offline import plot
+
+
+# Import the applications dataset
+jan_2020_applications = pd.read_excel(r"C:\Users\keneo\Downloads\Data and Software\Overview_FullData_For_4_Academic_Years - 31 January 2023 - 2020.xlsx",
+                                      sheet_name = "Sheet2_New_Applications_2")
+
+# Unpivot the applications dataset
+id_vars = ["Campus", "Group", "School / Department", "Level"]
+value_vars = ["Home", "Overseas", "Unknown", "Home.1", "Overseas.1", "Unknown.1", "Home.2", 
+              "Overseas.2", "Unknown.2", "Home.3", "Overseas.3", "Unknown.3"]
+
+new_jan_2020_applications = jan_2020_applications.melt(id_vars = id_vars, value_vars = value_vars, 
+                                                        var_name = "Category", 
+                                                        value_name = "Number of Applicants")
