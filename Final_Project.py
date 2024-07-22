@@ -91,16 +91,6 @@ sep_2020 = new_sep_2020_applications.merge(new_sep_2020_acceptance, on = on_valu
 
 
 
-# Filter all Undergraduate data
-sep_2020_undergrad = sep_2020[sep_2020["Level"] == "Undergraduate"]
-
-# Filter all School of Computing data from the Undergraduate data
-sep_2020_undergrad_computing = sep_2020_undergrad[sep_2020_undergrad["School / Department"] == "School of Computing"]
-
-
-
-
-
 # Initialize the Dash app
 app = dash.Dash(__name__)
 
