@@ -88,6 +88,9 @@ on_values = ["Campus", "Group", "School / Department", "Level", "Category", "Dat
 jan_2020 = new_jan_2020_applications.merge(new_jan_2020_acceptance, on = on_values, how = "outer")
 
 
+
+
+
 # Initialize the Dash app
 app = dash.Dash(__name__)
 
