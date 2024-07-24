@@ -89,8 +89,6 @@ jan_2020 = new_jan_2020_applications.merge(new_jan_2020_acceptance, on = on_valu
 
 
 
-
-
 # Initialize the Dash app
 app = dash.Dash(__name__)
 
