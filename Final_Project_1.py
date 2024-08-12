@@ -87,6 +87,7 @@ school_department_mapping = {
     "School of Postgraduate Medicine": "013",
     "School of Psychology": "014",
     "School of UG Medicine": "015"
+}
 
 # Function to modify School / Department
 def modify_school_department(row):
