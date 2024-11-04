@@ -7,13 +7,7 @@ Created on Sun May 26 14:55:26 2024
 
 # Import libraries
 import pandas as pd
-# import numpy as np
-# import matplotlib.pyplot as plt
-# import dash
-# from dash import html, dcc, Input, Output
-# import plotly.express as px
-# import plotly.graph_objects as go
-# from plotly.offline import plot
+
 
 # on_values_2 = ["Campus", "Group", "School / Department", "Level", "Category", "Number of Applications", "Date", "Number of Acceptances"]
 # data = sep_2020_2023.merge(sep_2019_2022, on = on_values_2, how = "outer")
@@ -40,7 +34,7 @@ new_sep_2017_2020_applications = sep_2017_2020_applications.melt(id_vars = id_va
                                                                  value_name = "Number of Applicantions")
 
 # Create a function to get the Date based on "Category" and also modify "Category"
-def modify_date_category_2017_2020(row):
+def get_date_sep_2017_2020(row):
     category = row["Category"]
     if category == "Home":
         row["Date"] = "Sep 2020"
@@ -78,8 +72,7 @@ def modify_date_category_2017_2020(row):
     return row
 
 # Apply the function to the September 2017-2020 applications dataset
-new_sep_2017_2020_applications = new_sep_2017_2020_applications.apply(modify_date_category_2017_2020, 
-                                                                      axis = 1)
+new_sep_2017_2020_applications = new_sep_2017_2020_applications.apply(get_date_sep_2017_2020, axis = 1)
 
 
 
@@ -96,8 +89,7 @@ new_sep_2017_2020_acceptances = sep_2017_2020_acceptances.melt(id_vars = id_vars
                                                                value_name = "Number of Acceptances")
 
 # Apply the function to the September 2017-2020 acceptances dataset
-new_sep_2017_2020_acceptances = new_sep_2017_2020_acceptances.apply(modify_date_category_2017_2020, 
-                                                                    axis = 1)
+new_sep_2017_2020_acceptances = new_sep_2017_2020_acceptances.apply(get_date_sep_2017_2020, axis = 1)
 
 # Merge the applications and acceptance datasets
 on_values = ["Campus", "Group", "School / Department", "Level", "Category", "Date"]
@@ -119,7 +111,7 @@ new_sep_2018_2021_applications = sep_2018_2021_applications.melt(id_vars = id_va
                                                                  value_name = "Number of Applications")
 
 # Create a function to get the Date based on "Category" and also modify "Category"
-def modify_date_category_2018_2021(row):
+def get_date_sep_2018_2021(row):
     category = row["Category"]
     if category == "Home":
         row["Date"] = "Sep 2021"
@@ -157,8 +149,7 @@ def modify_date_category_2018_2021(row):
     return row
 
 # Apply the function to the September 2018-2021 applications dataset
-new_sep_2018_2021_applications = new_sep_2018_2021_applications.apply(modify_date_category_2018_2021, 
-                                                                      axis = 1)
+new_sep_2018_2021_applications = new_sep_2018_2021_applications.apply(get_date_sep_2018_2021, axis = 1)
 
 
 
@@ -175,8 +166,7 @@ new_sep_2018_2021_acceptances = sep_2018_2021_acceptances.melt(id_vars = id_vars
                                                                value_name = "Number of Acceptances")
 
 # Apply the function to the September 2018-2021 acceptances dataset
-new_sep_2018_2021_acceptances = new_sep_2018_2021_acceptances.apply(modify_date_category_2018_2021, 
-                                                                    axis = 1)
+new_sep_2018_2021_acceptances = new_sep_2018_2021_acceptances.apply(get_date_sep_2018_2021, axis = 1)
 
 # Merge the applications and acceptance datasets
 sep_2018_2021 = new_sep_2018_2021_applications.merge(new_sep_2018_2021_acceptances, on = on_values, 
@@ -197,7 +187,7 @@ new_sep_2019_2022_applications = sep_2019_2022_applications.melt(id_vars = id_va
                                                                  value_name = "Number of Applications")
 
 # Create a function to get the Date based on "Category" and also modify "Category"
-def modify_date_category_2019_2022(row):
+def get_date_sep_2019_2022(row):
     category = row["Category"]
     if category == "Home":
         row["Date"] = "Sep 2022"
@@ -235,8 +225,7 @@ def modify_date_category_2019_2022(row):
     return row
 
 # Apply the function to the September 2019-2022 applications dataset
-new_sep_2019_2022_applications = new_sep_2019_2022_applications.apply(modify_date_category_2019_2022, 
-                                                                      axis = 1)
+new_sep_2019_2022_applications = new_sep_2019_2022_applications.apply(get_date_sep_2019_2022, axis = 1)
 
 
 
@@ -253,8 +242,7 @@ new_sep_2019_2022_acceptances = sep_2019_2022_acceptances.melt(id_vars = id_vars
                                                                value_name = "Number of Acceptances")
 
 # Apply the function to the September 2019-2022 acceptances dataset
-new_sep_2019_2022_acceptances = new_sep_2019_2022_acceptances.apply(modify_date_category_2019_2022, 
-                                                                    axis = 1)
+new_sep_2019_2022_acceptances = new_sep_2019_2022_acceptances.apply(get_date_sep_2019_2022, axis = 1)
 
 # Merge the applications and acceptance datasets
 sep_2019_2022 = new_sep_2019_2022_applications.merge(new_sep_2019_2022_acceptances, on = on_values, 
@@ -275,7 +263,7 @@ new_sep_2020_2023_applications = sep_2020_2023_applications.melt(id_vars = id_va
                                                                  value_name = "Number of Applications")
 
 # Create a function to get the Date based on "Category" and also modify "Category"
-def modify_date_category_2020_2023(row):
+def get_date_sep_2020_2023(row):
     category = row["Category"]
     if category == "Home":
         row["Date"] = "Sep 2023"
@@ -313,8 +301,7 @@ def modify_date_category_2020_2023(row):
     return row
 
 # Apply the function to the September 2020-2023 applications dataset
-new_sep_2020_2023_applications = new_sep_2020_2023_applications.apply(modify_date_category_2020_2023, 
-                                                                      axis = 1)
+new_sep_2020_2023_applications = new_sep_2020_2023_applications.apply(get_date_sep_2020_2023, axis = 1)
 
 
 
@@ -331,11 +318,86 @@ new_sep_2020_2023_acceptances = sep_2020_2023_acceptances.melt(id_vars = id_vars
                                                                value_name = "Number of Acceptances")
 
 # Apply the function to the September 2020-2023 acceptances dataset
-new_sep_2020_2023_acceptances = new_sep_2020_2023_acceptances.apply(modify_date_category_2020_2023, 
-                                                                    axis = 1)
+new_sep_2020_2023_acceptances = new_sep_2020_2023_acceptances.apply(get_date_sep_2020_2023, axis = 1)
 
 # Merge the applications and acceptance datasets
 sep_2020_2023 = new_sep_2020_2023_applications.merge(new_sep_2020_2023_acceptances, on = on_values, 
+                                                     how = "outer")
+
+
+
+
+
+########## JANUARY 2017-2020 APPLICATIONS DATASET ##########
+# Import the January 2017-2020 applications dataset
+jan_2017_2020_applications = pd.read_excel(r"C:\Users\keneo\Downloads\Data and Software\Overview_FullData_For_4_Academic_Years - 31 January 2023 - 2020.xlsx",
+                                           sheet_name = "Jan_2017-2020_Applications_2")
+
+# Unpivot the January 2017-2020 applications dataset
+new_jan_2017_2020_applications = jan_2017_2020_applications.melt(id_vars = id_vars, value_vars = value_vars, 
+                                                                 var_name = "Category", 
+                                                                 value_name = "Number of Applications")
+
+# Create a function to get the Date based on "Category" and also modify "Category"
+def get_date_jan_2017_2020(row):
+    category = row["Category"]
+    if category == "Home":
+        row["Date"] = "Jan 2020"
+    elif category == "Home.1":
+        row["Date"] = "Jan 2019"
+        row["Category"] = "Home"
+    elif category == "Home.2":
+        row["Date"] = "Jan 2018"
+        row["Category"] = "Home"
+    elif category == "Home.3":
+        row["Date"] = "Jan 2017"
+        row["Category"] = "Home"
+    elif category == "Overseas":
+        row["Date"] = "Jan 2020"
+    elif category == "Overseas.1":
+        row["Date"] = "Jan 2019"
+        row["Category"] = "Overseas"
+    elif category == "Overseas.2":
+        row["Date"] = "Jan 2018"
+        row["Category"] = "Overseas"
+    elif category == "Overseas.3":
+        row["Date"] = "Jan 2017"
+        row["Category"] = "Overseas"
+    elif category == "Unknown":
+        row["Date"] = "Jan 2020"
+    elif category == "Unknown.1":
+        row["Date"] = "Jan 2019"
+        row["Category"] = "Unknown"
+    elif category == "Unknown.2":
+        row["Date"] = "Jan 2018"
+        row["Category"] = "Unknown"
+    elif category == "Unknown.3":
+        row["Date"] = "Jan 2017"
+        row["Category"] = "Unknown"
+    return row
+
+# Apply the function to the January 2017-2020 applications dataset
+new_jan_2017_2020_applications = new_jan_2017_2020_applications.apply(get_date_jan_2017_2020, axis = 1)
+
+
+
+
+
+########## JANUARY 2017-2020 ACCEPTANCES DATASET ##########
+# Import the January 2017-2020 acceptances dataset
+jan_2017_2020_acceptances = pd.read_excel(r"C:\Users\keneo\Downloads\Data and Software\Overview_FullData_For_4_Academic_Years - 31 January 2023 - 2020.xlsx",
+                                          sheet_name = "Jan_2017-2020_Acceptances_2")
+
+# Unpivot the January 2017-2020 acceptances dataset
+new_jan_2017_2020_acceptances = jan_2017_2020_acceptances.melt(id_vars = id_vars, value_vars = value_vars, 
+                                                               var_name = "Category", 
+                                                               value_name = "Number of Acceptances")
+
+# Apply the function to the January 2017-2020 acceptances dataset
+new_jan_2017_2020_acceptances = new_jan_2017_2020_acceptances.apply(get_date_jan_2017_2020, axis = 1)
+
+# Merge the applications and acceptance datasets
+jan_2017_2020 = new_jan_2017_2020_applications.merge(new_jan_2017_2020_acceptances, on = on_values, 
                                                      how = "outer")
 
 
