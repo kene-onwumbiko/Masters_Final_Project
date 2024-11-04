@@ -70,34 +70,34 @@ def modify_date_category(row):
 # Apply the function to the applications dataset
 new_sep_2020_applications = new_sep_2020_applications.apply(modify_date_category, axis = 1)
 
-# Mapping dictionary
-school_department_mapping = {
-    "Accounting and Finance": "001",
-    "Centre for Foundation Studies": "002",
-    "Economics and International Studies": "003",
-    "English and Digital Media": "004",
-    "Enterprise and Entrepreneurship": "005",
-    "History and History of Art": "006",
-    "London": "007",
-    "Management": "008",
-    "Modern Foreign Languages": "009",
-    "School of Computing": "010",
-    "School of Education": "011",
-    "School of Law": "012",
-    "School of Postgraduate Medicine": "013",
-    "School of Psychology": "014",
-    "School of UG Medicine": "015"
-}
+# # Mapping dictionary
+# school_department_mapping = {
+#     "Accounting and Finance": "001",
+#     "Centre for Foundation Studies": "002",
+#     "Economics and International Studies": "003",
+#     "English and Digital Media": "004",
+#     "Enterprise and Entrepreneurship": "005",
+#     "History and History of Art": "006",
+#     "London": "007",
+#     "Management": "008",
+#     "Modern Foreign Languages": "009",
+#     "School of Computing": "010",
+#     "School of Education": "011",
+#     "School of Law": "012",
+#     "School of Postgraduate Medicine": "013",
+#     "School of Psychology": "014",
+#     "School of UG Medicine": "015"
+# }
 
-# Function to modify School / Department
-def modify_school_department(row):
-    school_department = row["School / Department"]
-    if school_department in school_department_mapping:
-        row["School / Department"] = school_department_mapping[school_department]
-    return row
+# # Function to modify School / Department
+# def modify_school_department(row):
+#     school_department = row["School / Department"]
+#     if school_department in school_department_mapping:
+#         row["School / Department"] = school_department_mapping[school_department]
+#     return row
 
-# Apply the function to the "sep_2020" DataFrame
-new_sep_2020_applications = new_sep_2020_applications.apply(modify_school_department, axis=1)
+# # Apply the function to the "sep_2020" DataFrame
+# new_sep_2020_applications = new_sep_2020_applications.apply(modify_school_department, axis=1)
 
 # Import the acceptance dataset
 sep_2020_acceptance = pd.read_excel(r"C:\Users\keneo\Downloads\Data and Software\Overview_FullData_For_4_Academic_Years - 30 October  2023 - 2020.xlsx",
