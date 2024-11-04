@@ -263,6 +263,84 @@ sep_2019_2022 = new_sep_2019_2022_applications.merge(new_sep_2019_2022_acceptanc
 
 
 
+########## SEPTEMBER 2020-2023 APPLICATIONS DATASET ##########
+# Import the September 2020-2023 applications dataset
+sep_2020_2023_applications = pd.read_excel(r"C:\Users\keneo\Downloads\Data and Software\Overview_FullData_For_4_Academic_Years - 30 October 2023 - 2023.xlsx",
+                                           sheet_name = "Sep_2020-2023_Applications_2")
+
+# Unpivot the September 2020-2023 applications dataset
+new_sep_2020_2023_applications = sep_2020_2023_applications.melt(id_vars = id_vars, value_vars = value_vars, 
+                                                                 var_name = "Category", 
+                                                                 value_name = "Number of Applications")
+
+# Create a function to get the Date based on "Category" and also modify "Category"
+def modify_date_category_2020_2023(row):
+    category = row["Category"]
+    if category == "Home":
+        row["Date"] = "Sep 2023"
+    elif category == "Home.1":
+        row["Date"] = "Sep 2022"
+        row["Category"] = "Home"
+    elif category == "Home.2":
+        row["Date"] = "Sep 2021"
+        row["Category"] = "Home"
+    elif category == "Home.3":
+        row["Date"] = "Sep 2020"
+        row["Category"] = "Home"
+    elif category == "Overseas":
+        row["Date"] = "Sep 2023"
+    elif category == "Overseas.1":
+        row["Date"] = "Sep 2022"
+        row["Category"] = "Overseas"
+    elif category == "Overseas.2":
+        row["Date"] = "Sep 2021"
+        row["Category"] = "Overseas"
+    elif category == "Overseas.3":
+        row["Date"] = "Sep 2020"
+        row["Category"] = "Overseas"
+    elif category == "Unknown":
+        row["Date"] = "Sep 2023"
+    elif category == "Unknown.1":
+        row["Date"] = "Sep 2022"
+        row["Category"] = "Unknown"
+    elif category == "Unknown.2":
+        row["Date"] = "Sep 2021"
+        row["Category"] = "Unknown"
+    elif category == "Unknown.3":
+        row["Date"] = "Sep 2020"
+        row["Category"] = "Unknown"
+    return row
+
+# Apply the function to the September 2020-2023 applications dataset
+new_sep_2020_2023_applications = new_sep_2020_2023_applications.apply(modify_date_category_2020_2023, 
+                                                                      axis = 1)
+
+
+
+
+
+########## SEPTEMBER 2020-2023 ACCEPTANCES DATASET ##########
+# Import the September 2020-2023 acceptances dataset
+sep_2020_2023_acceptances = pd.read_excel(r"C:\Users\keneo\Downloads\Data and Software\Overview_FullData_For_4_Academic_Years - 30 October 2023 - 2023.xlsx",
+                                          sheet_name = "Sep_2020-2023_Acceptances_2")
+
+# Unpivot the September 2020-2023 acceptances dataset
+new_sep_2020_2023_acceptances = sep_2020_2023_acceptances.melt(id_vars = id_vars, value_vars = value_vars, 
+                                                               var_name = "Category", 
+                                                               value_name = "Number of Acceptances")
+
+# Apply the function to the September 2020-2023 acceptances dataset
+new_sep_2020_2023_acceptances = new_sep_2020_2023_acceptances.apply(modify_date_category_2020_2023, 
+                                                                    axis = 1)
+
+# Merge the applications and acceptance datasets
+on_values = ["Campus", "Group", "School / Department", "Level", "Category", "Date"]
+sep_2020_2023 = new_sep_2020_2023_applications.merge(new_sep_2020_2023_acceptances, on = on_values, 
+                                                     how = "outer")
+
+
+
+
 
 
 
