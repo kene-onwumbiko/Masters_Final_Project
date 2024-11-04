@@ -105,7 +105,7 @@ sep_2017_2020 = new_sep_2017_2020_applications.merge(new_sep_2017_2020_acceptanc
 ########## SEPTEMBER 2018-2021 APPLICATIONS DATASET ##########
 # Import the September 2018-2021 applications dataset
 sep_2018_2021_applications = pd.read_excel(r"C:\Users\keneo\Downloads\Data and Software\Overview_FullData_For_4_Academic_Years - 30 October 2023 - 2021.xlsx",
-                                           sheet_name = "Sep_2018-2021_Acceptances_2")
+                                           sheet_name = "Sep_2018-2021_Applications_2")
 
 # Unpivot the September 2018-2021 applications dataset
 new_sep_2018_2021_applications = sep_2018_2021_applications.melt(id_vars = id_vars, value_vars = value_vars, 
@@ -154,6 +154,28 @@ def modify_date_category_2018_2021(row):
 new_sep_2018_2021_applications = new_sep_2018_2021_applications.apply(modify_date_category_2018_2021, 
                                                                       axis = 1)
 
+
+
+
+
+########## SEPTEMBER 2018-2021 ACCEPTANCES DATASET ##########
+# Import the September 2018-2021 acceptances dataset
+sep_2018_2021_acceptances = pd.read_excel(r"C:\Users\keneo\Downloads\Data and Software\Overview_FullData_For_4_Academic_Years - 30 October 2023 - 2021.xlsx",
+                                          sheet_name = "Sep_2018-2021_Acceptances_2")
+
+# Unpivot the September 2018-2021 acceptances dataset
+new_sep_2018_2021_acceptances = sep_2018_2021_acceptances.melt(id_vars = id_vars, value_vars = value_vars, 
+                                                               var_name = "Category", 
+                                                               value_name = "Number of Acceptances")
+
+# Apply the function to the September 2018-2021 acceptances dataset
+new_sep_2018_2021_acceptances = new_sep_2018_2021_acceptances.apply(modify_date_category_2018_2021, 
+                                                                    axis = 1)
+
+# Merge the applications and acceptance datasets
+on_values = ["Campus", "Group", "School / Department", "Level", "Category", "Date"]
+sep_2018_2021 = new_sep_2018_2021_applications.merge(new_sep_2018_2021_acceptances, on = on_values, 
+                                                     how = "outer")
 
 
 
