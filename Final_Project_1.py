@@ -15,6 +15,9 @@ import pandas as pd
 # import plotly.graph_objects as go
 # from plotly.offline import plot
 
+# on_values_2 = ["Campus", "Group", "School / Department", "Level", "Category", "Number of Applications", "Date", "Number of Acceptances"]
+# data = sep_2020_2023.merge(sep_2019_2022, on = on_values_2, how = "outer")
+
 # # Correct the date format
 # sep_2019_2022["Date"] = pd.to_datetime(sep_2019_2022["Date"]).dt.date
 
@@ -176,7 +179,6 @@ new_sep_2018_2021_acceptances = new_sep_2018_2021_acceptances.apply(modify_date_
                                                                     axis = 1)
 
 # Merge the applications and acceptance datasets
-on_values = ["Campus", "Group", "School / Department", "Level", "Category", "Date"]
 sep_2018_2021 = new_sep_2018_2021_applications.merge(new_sep_2018_2021_acceptances, on = on_values, 
                                                      how = "outer")
 
@@ -255,7 +257,6 @@ new_sep_2019_2022_acceptances = new_sep_2019_2022_acceptances.apply(modify_date_
                                                                     axis = 1)
 
 # Merge the applications and acceptance datasets
-on_values = ["Campus", "Group", "School / Department", "Level", "Category", "Date"]
 sep_2019_2022 = new_sep_2019_2022_applications.merge(new_sep_2019_2022_acceptances, on = on_values, 
                                                      how = "outer")
 
@@ -334,7 +335,6 @@ new_sep_2020_2023_acceptances = new_sep_2020_2023_acceptances.apply(modify_date_
                                                                     axis = 1)
 
 # Merge the applications and acceptance datasets
-on_values = ["Campus", "Group", "School / Department", "Level", "Category", "Date"]
 sep_2020_2023 = new_sep_2020_2023_applications.merge(new_sep_2020_2023_acceptances, on = on_values, 
                                                      how = "outer")
 
