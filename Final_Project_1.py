@@ -7,13 +7,13 @@ Created on Sun May 26 14:55:26 2024
 
 # Import libraries
 import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
+# import numpy as np
+# import matplotlib.pyplot as plt
 import dash
 from dash import html, dcc, Input, Output
-import plotly.express as px
+# import plotly.express as px
 import plotly.graph_objects as go
-from plotly.offline import plot
+# from plotly.offline import plot
 
 
 # Import the applications dataset
