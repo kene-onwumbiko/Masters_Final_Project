@@ -15,6 +15,9 @@ import pandas as pd
 # import plotly.graph_objects as go
 # from plotly.offline import plot
 
+# # Correct the date format
+# sep_2019_2022["Date"] = pd.to_datetime(sep_2019_2022["Date"]).dt.date
+
 
 
 
@@ -37,37 +40,37 @@ new_sep_2017_2020_applications = sep_2017_2020_applications.melt(id_vars = id_va
 def modify_date_category_2017_2020(row):
     category = row["Category"]
     if category == "Home":
-        row["Date"] = 2020
+        row["Date"] = "Sep 2020"
     elif category == "Home.1":
-        row["Date"] = 2019
+        row["Date"] = "Sep 2019"
         row["Category"] = "Home"
     elif category == "Home.2":
-        row["Date"] = 2018
+        row["Date"] = "Sep 2018"
         row["Category"] = "Home"
     elif category == "Home.3":
-        row["Date"] = 2017
+        row["Date"] = "Sep 2017"
         row["Category"] = "Home"
     elif category == "Overseas":
-        row["Date"] = 2020
+        row["Date"] = "Sep 2020"
     elif category == "Overseas.1":
-        row["Date"] = 2019
+        row["Date"] = "Sep 2019"
         row["Category"] = "Overseas"
     elif category == "Overseas.2":
-        row["Date"] = 2018
+        row["Date"] = "Sep 2018"
         row["Category"] = "Overseas"
     elif category == "Overseas.3":
-        row["Date"] = 2017
+        row["Date"] = "Sep 2017"
         row["Category"] = "Overseas"
     elif category == "Unknown":
-        row["Date"] = 2020
+        row["Date"] = "Sep 2020"
     elif category == "Unknown.1":
-        row["Date"] = 2019
+        row["Date"] = "Sep 2019"
         row["Category"] = "Unknown"
     elif category == "Unknown.2":
-        row["Date"] = 2018
+        row["Date"] = "Sep 2018"
         row["Category"] = "Unknown"
     elif category == "Unknown.3":
-        row["Date"] = 2017
+        row["Date"] = "Sep 2017"
         row["Category"] = "Unknown"
     return row
 
@@ -116,37 +119,37 @@ new_sep_2018_2021_applications = sep_2018_2021_applications.melt(id_vars = id_va
 def modify_date_category_2018_2021(row):
     category = row["Category"]
     if category == "Home":
-        row["Date"] = 2021
+        row["Date"] = "Sep 2021"
     elif category == "Home.1":
-        row["Date"] = 2020
+        row["Date"] = "Sep 2020"
         row["Category"] = "Home"
     elif category == "Home.2":
-        row["Date"] = 2019
+        row["Date"] = "Sep 2019"
         row["Category"] = "Home"
     elif category == "Home.3":
-        row["Date"] = 2018
+        row["Date"] = "Sep 2018"
         row["Category"] = "Home"
     elif category == "Overseas":
-        row["Date"] = 2021
+        row["Date"] = "Sep 2021"
     elif category == "Overseas.1":
-        row["Date"] = 2020
+        row["Date"] = "Sep 2020"
         row["Category"] = "Overseas"
     elif category == "Overseas.2":
-        row["Date"] = 2019
+        row["Date"] = "Sep 2019"
         row["Category"] = "Overseas"
     elif category == "Overseas.3":
-        row["Date"] = 2018
+        row["Date"] = "Sep 2018"
         row["Category"] = "Overseas"
     elif category == "Unknown":
-        row["Date"] = 2021
+        row["Date"] = "Sep 2021"
     elif category == "Unknown.1":
-        row["Date"] = 2020
+        row["Date"] = "Sep 2020"
         row["Category"] = "Unknown"
     elif category == "Unknown.2":
-        row["Date"] = 2019
+        row["Date"] = "Sep 2019"
         row["Category"] = "Unknown"
     elif category == "Unknown.3":
-        row["Date"] = 2018
+        row["Date"] = "Sep 2018"
         row["Category"] = "Unknown"
     return row
 
@@ -177,6 +180,84 @@ on_values = ["Campus", "Group", "School / Department", "Level", "Category", "Dat
 sep_2018_2021 = new_sep_2018_2021_applications.merge(new_sep_2018_2021_acceptances, on = on_values, 
                                                      how = "outer")
 
+
+
+
+
+########## SEPTEMBER 2019-2022 APPLICATIONS DATASET ##########
+# Import the September 2019-2022 applications dataset
+sep_2019_2022_applications = pd.read_excel(r"C:\Users\keneo\Downloads\Data and Software\Overview_FullData_For_4_Academic_Years - 30 October 2023 - 2022.xlsx",
+                                           sheet_name = "Sep_2019-2022_Applications_2")
+
+# Unpivot the September 2019-2022 applications dataset
+new_sep_2019_2022_applications = sep_2019_2022_applications.melt(id_vars = id_vars, value_vars = value_vars, 
+                                                                 var_name = "Category", 
+                                                                 value_name = "Number of Applications")
+
+# Create a function to get the Date based on "Category" and also modify "Category"
+def modify_date_category_2019_2022(row):
+    category = row["Category"]
+    if category == "Home":
+        row["Date"] = "Sep 2022"
+    elif category == "Home.1":
+        row["Date"] = "Sep 2021"
+        row["Category"] = "Home"
+    elif category == "Home.2":
+        row["Date"] = "Sep 2020"
+        row["Category"] = "Home"
+    elif category == "Home.3":
+        row["Date"] = "Sep 2019"
+        row["Category"] = "Home"
+    elif category == "Overseas":
+        row["Date"] = "Sep 2022"
+    elif category == "Overseas.1":
+        row["Date"] = "Sep 2021"
+        row["Category"] = "Overseas"
+    elif category == "Overseas.2":
+        row["Date"] = "Sep 2020"
+        row["Category"] = "Overseas"
+    elif category == "Overseas.3":
+        row["Date"] = "Sep 2019"
+        row["Category"] = "Overseas"
+    elif category == "Unknown":
+        row["Date"] = "Sep 2022"
+    elif category == "Unknown.1":
+        row["Date"] = "Sep 2021"
+        row["Category"] = "Unknown"
+    elif category == "Unknown.2":
+        row["Date"] = "Sep 2020"
+        row["Category"] = "Unknown"
+    elif category == "Unknown.3":
+        row["Date"] = "Sep 2019"
+        row["Category"] = "Unknown"
+    return row
+
+# Apply the function to the September 2019-2022 applications dataset
+new_sep_2019_2022_applications = new_sep_2019_2022_applications.apply(modify_date_category_2019_2022, 
+                                                                      axis = 1)
+
+
+
+
+
+########## SEPTEMBER 2019-2022 ACCEPTANCES DATASET ##########
+# Import the September 2019-2022 acceptances dataset
+sep_2019_2022_acceptances = pd.read_excel(r"C:\Users\keneo\Downloads\Data and Software\Overview_FullData_For_4_Academic_Years - 30 October 2023 - 2022.xlsx",
+                                          sheet_name = "Sep_2019-2022_Acceptances_2")
+
+# Unpivot the September 2019-2022 acceptances dataset
+new_sep_2019_2022_acceptances = sep_2019_2022_acceptances.melt(id_vars = id_vars, value_vars = value_vars, 
+                                                               var_name = "Category", 
+                                                               value_name = "Number of Acceptances")
+
+# Apply the function to the September 2019-2022 acceptances dataset
+new_sep_2019_2022_acceptances = new_sep_2019_2022_acceptances.apply(modify_date_category_2019_2022, 
+                                                                    axis = 1)
+
+# Merge the applications and acceptance datasets
+on_values = ["Campus", "Group", "School / Department", "Level", "Category", "Date"]
+sep_2019_2022 = new_sep_2019_2022_applications.merge(new_sep_2019_2022_acceptances, on = on_values, 
+                                                     how = "outer")
 
 
 
