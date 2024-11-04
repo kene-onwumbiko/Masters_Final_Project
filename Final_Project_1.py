@@ -616,16 +616,16 @@ new_jan_2020_2023_applications = new_jan_2020_2023_applications.apply(get_date_j
 jan_2020_2023_acceptances = pd.read_excel(r"C:\Users\keneo\Downloads\Data and Software\Overview_FullData_For_4_Academic_Years - 31 January 2024 - 2023.xlsx",
                                           sheet_name = "Jan_2020-2023_Acceptances_2")
 
-# Unpivot the January 2019-2022 acceptances dataset
-new_jan_2019_2022_acceptances = jan_2019_2022_acceptances.melt(id_vars = id_vars, value_vars = value_vars, 
+# Unpivot the January 2020-2023 acceptances dataset
+new_jan_2020_2023_acceptances = jan_2020_2023_acceptances.melt(id_vars = id_vars, value_vars = value_vars, 
                                                                var_name = "Category", 
                                                                value_name = "Number of Acceptances")
 
-# Apply the function to the January 2019-2022 acceptances dataset
-new_jan_2019_2022_acceptances = new_jan_2019_2022_acceptances.apply(get_date_jan_2019_2022, axis = 1)
+# Apply the function to the January 2020-2023 acceptances dataset
+new_jan_2020_2023_acceptances = new_jan_2020_2023_acceptances.apply(get_date_jan_2020_2023, axis = 1)
 
 # Merge the applications and acceptance datasets
-jan_2019_2022 = new_jan_2019_2022_applications.merge(new_jan_2019_2022_acceptances, on = on_values, 
+jan_2020_2023 = new_jan_2020_2023_applications.merge(new_jan_2020_2023_acceptances, on = on_values, 
                                                      how = "outer")
 
 
