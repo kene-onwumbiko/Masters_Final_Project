@@ -9,13 +9,6 @@ Created on Sun May 26 14:55:26 2024
 import pandas as pd
 
 
-# on_values_2 = ["Campus", "Group", "School / Department", "Level", "Category", "Number of Applications", "Date", "Number of Acceptances"]
-# data = sep_2020_2023.merge(sep_2019_2022, on = on_values_2, how = "outer")
-
-# # Correct the date format
-# sep_2019_2022["Date"] = pd.to_datetime(sep_2019_2022["Date"]).dt.date
-
-
 
 
 
@@ -31,7 +24,7 @@ value_vars = ["Home", "Overseas", "Unknown", "Home.1", "Overseas.1", "Unknown.1"
 
 new_sep_2017_2020_applications = sep_2017_2020_applications.melt(id_vars = id_vars, value_vars = value_vars, 
                                                                  var_name = "Category", 
-                                                                 value_name = "Number of Applicantions")
+                                                                 value_name = "Number of Applications")
 
 # Create a function to get the Date based on "Category" and also modify "Category"
 def get_date_sep_2017_2020(row):
@@ -632,8 +625,25 @@ jan_2020_2023 = new_jan_2020_2023_applications.merge(new_jan_2020_2023_acceptanc
 
 
 
+# Merge all the final datasets
+on_values_2 = ["Campus", "Group", "School / Department", "Level", "Category", "Number of Applications", "Date", "Number of Acceptances"]
 
+final_records = sep_2020_2023.merge(sep_2019_2022, on = on_values_2, how = "outer")
 
+final_records = final_records.merge(sep_2018_2021, on = on_values_2, how = "outer")
+
+final_records = final_records.merge(sep_2017_2020, on = on_values_2, how = "outer")
+
+final_records = final_records.merge(jan_2020_2023, on = on_values_2, how = "outer")
+
+final_records = final_records.merge(jan_2019_2022, on = on_values_2, how = "outer")
+
+final_records = final_records.merge(jan_2018_2021, on = on_values_2, how = "outer")
+
+final_records = final_records.merge(jan_2017_2020, on = on_values_2, how = "outer")
+
+# Change the date format
+final_records["Date"] = pd.to_datetime(final_records["Date"]).dt.date
 
 
 
