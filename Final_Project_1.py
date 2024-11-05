@@ -643,7 +643,7 @@ final_records = final_records.merge(jan_2018_2021, on = on_values_2, how = "oute
 final_records = final_records.merge(jan_2017_2020, on = on_values_2, how = "outer")
 
 # Change the date format
-final_records["Date"] = pd.to_datetime(final_records["Date"]).dt.date
+# final_records["Date"] = pd.to_datetime(final_records["Date"]).dt.date
 
 # Extract all the registration records for the datasets
 sep_2019_registrations = sep_2017_2020_applications.iloc[:, :5]
@@ -711,7 +711,7 @@ final_registrations = final_registrations.merge(jan_2020_registrations, on = on_
 final_registrations = final_registrations.merge(jan_2019_registrations, on = on_values_3, how = "outer")
 
 # Change the date format
-final_registrations["Date"] = pd.to_datetime(final_registrations["Date"]).dt.date
+# final_registrations["Date"] = pd.to_datetime(final_registrations["Date"]).dt.date
 
 
 on_values_4 = ["Campus", "Group", "School / Department", "Level", "Date"]
