@@ -714,8 +714,8 @@ final_registrations = final_registrations.merge(jan_2019_registrations, on = on_
 final_registrations["Date"] = pd.to_datetime(final_registrations["Date"]).dt.date
 
 
-
-
+on_values_4 = ["Campus", "Group", "School / Department", "Level", "Date"]
+final = final_records.merge(final_registrations, on = on_values_4, how = "outer")
 
 
 
