@@ -698,7 +698,28 @@ jan_2022_registrations["Date"] = "Jan 2022"
 on_values_3 = ["Campus", "Group", "School / Department", "Level", "Registrations", "Date"]
 final_registrations = sep_2022_registrations.merge(sep_2021_registrations, on = on_values_3, how = "outer")
 
+final_registrations = final_registrations.merge(sep_2020_registrations, on = on_values_3, how = "outer")
+
+final_registrations = final_registrations.merge(sep_2019_registrations, on = on_values_3, how = "outer")
+
+final_registrations = final_registrations.merge(jan_2022_registrations, on = on_values_3, how = "outer")
+
 final_registrations = final_registrations.merge(jan_2021_registrations, on = on_values_3, how = "outer")
+
+final_registrations = final_registrations.merge(jan_2020_registrations, on = on_values_3, how = "outer")
+
+final_registrations = final_registrations.merge(jan_2019_registrations, on = on_values_3, how = "outer")
+
+# Change the date format
+final_registrations["Date"] = pd.to_datetime(final_registrations["Date"]).dt.date
+
+
+
+
+
+
+
+
 
 
 
