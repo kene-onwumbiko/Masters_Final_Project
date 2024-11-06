@@ -625,26 +625,6 @@ jan_2020_2023 = new_jan_2020_2023_applications.merge(new_jan_2020_2023_acceptanc
 
 
 
-# Merge all the final application and acceptance records
-on_values_2 = ["Campus", "Group", "School / Department", "Level", "Category", "Number of Applications", "Date", "Number of Acceptances"]
-
-final_records = pd.merge_ordered(sep_2020_2023, sep_2019_2022, on = on_values_2, how = "outer")
-
-final_records = final_records.merge(sep_2018_2021, on = on_values_2, how = "outer")
-
-final_records = final_records.merge(sep_2017_2020, on = on_values_2, how = "outer")
-
-final_records = final_records.merge(jan_2020_2023, on = on_values_2, how = "outer")
-
-final_records = final_records.merge(jan_2019_2022, on = on_values_2, how = "outer")
-
-final_records = final_records.merge(jan_2018_2021, on = on_values_2, how = "outer")
-
-final_records = final_records.merge(jan_2017_2020, on = on_values_2, how = "outer")
-
-# Change the date format
-# final_records["Date"] = pd.to_datetime(final_records["Date"]).dt.date
-
 # Extract all the registration records for the datasets
 sep_2019_registrations = sep_2017_2020_applications.iloc[:, :5]
 # Rename the "Registrations for 2019" column to "Registrations"
@@ -714,8 +694,30 @@ final_registrations = final_registrations.merge(jan_2019_registrations, on = on_
 # final_registrations["Date"] = pd.to_datetime(final_registrations["Date"]).dt.date
 
 
-on_values_4 = ["Campus", "Group", "School / Department", "Level", "Date"]
-final = final_records.merge(final_registrations, on = on_values_4, how = "outer")
+
+
+
+# Merge all the final application and acceptance records
+on_values_2 = ["Campus", "Group", "School / Department", "Level", "Category", "Number of Applications", "Date", "Number of Acceptances"]
+
+final_records = pd.merge_ordered(sep_2020_2023, sep_2019_2022, on = on_values_2, how = "outer")
+
+final_records = final_records.merge(sep_2018_2021, on = on_values_2, how = "outer")
+
+final_records = final_records.merge(sep_2017_2020, on = on_values_2, how = "outer")
+
+final_records = final_records.merge(jan_2020_2023, on = on_values_2, how = "outer")
+
+final_records = final_records.merge(jan_2019_2022, on = on_values_2, how = "outer")
+
+final_records = final_records.merge(jan_2018_2021, on = on_values_2, how = "outer")
+
+final_records = final_records.merge(jan_2017_2020, on = on_values_2, how = "outer")
+
+# Change the date format
+# final_records["Date"] = pd.to_datetime(final_records["Date"]).dt.date
+
+
 
 
 
