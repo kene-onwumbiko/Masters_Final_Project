@@ -328,7 +328,7 @@ jan_2020_2023 = new_jan_2020_2023_applications.merge(new_jan_2020_2023_acceptanc
 
 
 ########## GET THE FINAL RECORDS FOR APPLICATIONS AND ACCEPTANCES ##########
-# Get the levels for the 2020-2023 datasets
+# Extract the levels for the 2020-2023 datasets
 sep_levels_2020_2023 = sep_2020_2023.iloc[:, :4]
 jan_levels_2020_2023 = jan_2020_2023.iloc[:, :4]
 
@@ -447,8 +447,9 @@ jan_2022_registrations["Date"] = "Jan 2022"
 # # Change the date format
 # final_registrations["Date"] = pd.to_datetime(final_registrations["Date"]).dt.date
 
-
-
+# Extract the levels for the 2022 registrations datasets
+sep_levels_registrations = sep_2022_registrations.iloc[:, :4]
+jan_levels_registrations = jan_2022_registrations.iloc[:, :4]
 
 
 
