@@ -554,6 +554,9 @@ jan_2019_2022 = new_jan_2019_2022_applications.merge(new_jan_2019_2022_acceptanc
 jan_2020_2023_applications = pd.read_excel(r"C:\Users\keneo\Downloads\Data and Software\Overview_FullData_For_4_Academic_Years - 31 January 2024 - 2023.xlsx",
                                            sheet_name = "Jan_2020-2023_Applications_2")
 
+# Fill the missing cell with "Enterprise and Entrepreneurship"
+jan_2020_2023_applications = jan_2020_2023_applications.fillna("Enterprise and Entrepreneurship")
+
 # Unpivot the January 2020-2023 applications dataset
 new_jan_2020_2023_applications = jan_2020_2023_applications.melt(id_vars = id_vars, value_vars = value_vars, 
                                                                  var_name = "Category", 
@@ -609,6 +612,9 @@ new_jan_2020_2023_applications = new_jan_2020_2023_applications.apply(get_date_j
 jan_2020_2023_acceptances = pd.read_excel(r"C:\Users\keneo\Downloads\Data and Software\Overview_FullData_For_4_Academic_Years - 31 January 2024 - 2023.xlsx",
                                           sheet_name = "Jan_2020-2023_Acceptances_2")
 
+# Fill the missing cell with "Enterprise and Entrepreneurship"
+jan_2020_2023_acceptances = jan_2020_2023_acceptances.fillna("Enterprise and Entrepreneurship")
+
 # Unpivot the January 2020-2023 acceptances dataset
 new_jan_2020_2023_acceptances = jan_2020_2023_acceptances.melt(id_vars = id_vars, value_vars = value_vars, 
                                                                var_name = "Category", 
@@ -624,7 +630,7 @@ jan_2020_2023 = new_jan_2020_2023_applications.merge(new_jan_2020_2023_acceptanc
 
 
 
-
+########## GET ALL THE REGISTRATION RECORDS ##########
 # Extract all the registration records for the datasets
 sep_2019_registrations = sep_2017_2020_applications.iloc[:, :5]
 # Rename the "Registrations for 2019" column to "Registrations"
@@ -675,20 +681,20 @@ jan_2022_registrations.rename(columns = {"Registrations for 2022": "Registration
 jan_2022_registrations["Date"] = "Jan 2022"
 
 # Merge all the registration records
-on_values_3 = ["Campus", "Group", "School / Department", "Level", "Registrations", "Date"]
-final_registrations = sep_2022_registrations.merge(sep_2021_registrations, on = on_values_3, how = "outer")
+on_values_2 = ["Campus", "Group", "School / Department", "Level", "Registrations", "Date"]
+final_registrations = sep_2022_registrations.merge(sep_2021_registrations, on = on_values_2, how = "outer")
 
-final_registrations = final_registrations.merge(sep_2020_registrations, on = on_values_3, how = "outer")
+final_registrations = final_registrations.merge(sep_2020_registrations, on = on_values_2, how = "outer")
 
-final_registrations = final_registrations.merge(sep_2019_registrations, on = on_values_3, how = "outer")
+final_registrations = final_registrations.merge(sep_2019_registrations, on = on_values_2, how = "outer")
 
-final_registrations = final_registrations.merge(jan_2022_registrations, on = on_values_3, how = "outer")
+final_registrations = final_registrations.merge(jan_2022_registrations, on = on_values_2, how = "outer")
 
-final_registrations = final_registrations.merge(jan_2021_registrations, on = on_values_3, how = "outer")
+final_registrations = final_registrations.merge(jan_2021_registrations, on = on_values_2, how = "outer")
 
-final_registrations = final_registrations.merge(jan_2020_registrations, on = on_values_3, how = "outer")
+final_registrations = final_registrations.merge(jan_2020_registrations, on = on_values_2, how = "outer")
 
-final_registrations = final_registrations.merge(jan_2019_registrations, on = on_values_3, how = "outer")
+final_registrations = final_registrations.merge(jan_2019_registrations, on = on_values_2, how = "outer")
 
 # Change the date format
 # final_registrations["Date"] = pd.to_datetime(final_registrations["Date"]).dt.date
@@ -697,22 +703,22 @@ final_registrations = final_registrations.merge(jan_2019_registrations, on = on_
 
 
 
-# Merge all the final application and acceptance records
-on_values_2 = ["Campus", "Group", "School / Department", "Level", "Category", "Number of Applications", "Date", "Number of Acceptances"]
+# # Merge all the final application and acceptance records
+on_values_3 = ["Campus", "Group", "School / Department", "Level", "Category", "Number of Applications", "Date", "Number of Acceptances"]
 
-final_records = pd.merge_ordered(sep_2020_2023, sep_2019_2022, on = on_values_2, how = "outer")
+# final_records = pd.merge_ordered(sep_2020_2023, sep_2019_2022, on = on_values_2, how = "outer")
 
-final_records = final_records.merge(sep_2018_2021, on = on_values_2, how = "outer")
+# final_records = final_records.merge(sep_2018_2021, on = on_values_2, how = "outer")
 
-final_records = final_records.merge(sep_2017_2020, on = on_values_2, how = "outer")
+# final_records = final_records.merge(sep_2017_2020, on = on_values_2, how = "outer")
 
-final_records = final_records.merge(jan_2020_2023, on = on_values_2, how = "outer")
+# final_records = final_records.merge(jan_2020_2023, on = on_values_2, how = "outer")
 
-final_records = final_records.merge(jan_2019_2022, on = on_values_2, how = "outer")
+# final_records = final_records.merge(jan_2019_2022, on = on_values_2, how = "outer")
 
-final_records = final_records.merge(jan_2018_2021, on = on_values_2, how = "outer")
+# final_records = final_records.merge(jan_2018_2021, on = on_values_2, how = "outer")
 
-final_records = final_records.merge(jan_2017_2020, on = on_values_2, how = "outer")
+# final_records = final_records.merge(jan_2017_2020, on = on_values_2, how = "outer")
 
 # Change the date format
 # final_records["Date"] = pd.to_datetime(final_records["Date"]).dt.date
@@ -721,9 +727,23 @@ final_records = final_records.merge(jan_2017_2020, on = on_values_2, how = "oute
 
 
 
+##########
 
+sep_levels_2020_2023 = sep_2020_2023_applications.iloc[:, :4]
 
+jan_levels_2020_2023 = jan_2020_2023_applications.iloc[:, :4]
 
+new_sep_2017_2020 = sep_2017_2020[sep_2017_2020["Date"] != "Sep 2020"]
+sep_2017_2023 = sep_2020_2023.merge(new_sep_2017_2020, on = on_values_3, how = "left")
+
+# on_values_3 = ["Campus", "Group", "School / Department", "Level"]
+# levels = sep_levels_2020_2023.merge(sep_levels_2019_2022, on = on_values_3, how = "outer")
+# levels = levels.merge(sep_levels_2018_2021, on = on_values_3, how = "outer")
+# levels = levels.merge(sep_levels_2017_2020, on = on_values_3, how = "outer")
+# levels = levels.merge(jan_levels_2020_2023, on = on_values_3, how = "outer")
+# levels = levels.merge(jan_levels_2019_2022, on = on_values_3, how = "outer")
+# levels = levels.merge(jan_levels_2018_2021, on = on_values_3, how = "outer")
+# levels = levels.merge(jan_levels_2017_2020, on = on_values_3, how = "outer")
 
 
 
