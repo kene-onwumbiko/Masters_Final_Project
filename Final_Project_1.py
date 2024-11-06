@@ -429,7 +429,7 @@ jan_2022_registrations = jan_2020_2023_applications.iloc[:, :5]
 # jan_2022_registrations["Date"] = "Jan 2022"
 
 # # Merge all the registration records
-on_values_4 = ["Campus", "Group", "School / Department", "Level", "Registrations", "Date"]
+# on_values_4 = ["Campus", "Group", "School / Department", "Level", "Registrations", "Date"]
 # final_registrations = sep_2022_registrations.merge(sep_2021_registrations, on = on_values_4, how = "outer")
 
 # final_registrations = final_registrations.merge(sep_2020_registrations, on = on_values_4, how = "outer")
@@ -447,14 +447,14 @@ on_values_4 = ["Campus", "Group", "School / Department", "Level", "Registrations
 # # Change the date format
 # final_registrations["Date"] = pd.to_datetime(final_registrations["Date"]).dt.date
 
-# # Extract the levels for the 2022 registrations datasets
-# sep_levels_registrations = sep_2022_registrations.iloc[:, :4]
-# jan_levels_registrations = jan_2022_registrations.iloc[:, :4]
+# Extract the levels for the 2022 registrations datasets
+sep_levels_registrations = sep_2022_registrations.iloc[:, :4]
+jan_levels_registrations = jan_2022_registrations.iloc[:, :4]
 
-# data = sep_levels_registrations.merge(sep_2022_registrations, on = on_values_2, how = "left")
-# data = data.merge(sep_2021_registrations, on = on_values_4, how = "left")
-
-
+data = sep_levels_registrations.merge(sep_2022_registrations, on = on_values_2, how = "left")
+data = data.merge(sep_2021_registrations, on = on_values_2, how = "left")
+data = data.merge(sep_2020_registrations, on = on_values_2, how = "left")
+data = data.merge(sep_2019_registrations, on = on_values_2, how = "left")
 
 
 
