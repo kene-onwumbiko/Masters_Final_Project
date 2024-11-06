@@ -353,45 +353,25 @@ final_records = sep_2017_2023.merge(jan_2017_2023, on = on_values_3, how = "oute
 
 
 
-
 ########## GET ALL THE REGISTRATION RECORDS ##########
-# Import the September 2018-2021 applications dataset
+# Import the remaining applications datasets
+# September 2018-2021
 sep_2018_2021_applications = pd.read_excel(r"C:\Users\keneo\Downloads\Data and Software\Overview_FullData_For_4_Academic_Years - 30 October 2023 - 2021.xlsx",
                                            sheet_name = "Sep_2018-2021_Applications_2")
 
-# Import the September 2018-2021 acceptances dataset
-sep_2018_2021_acceptances = pd.read_excel(r"C:\Users\keneo\Downloads\Data and Software\Overview_FullData_For_4_Academic_Years - 30 October 2023 - 2021.xlsx",
-                                          sheet_name = "Sep_2018-2021_Acceptances_2")
-
-# Import the September 2019-2022 applications dataset
+# September 2019-2022
 sep_2019_2022_applications = pd.read_excel(r"C:\Users\keneo\Downloads\Data and Software\Overview_FullData_For_4_Academic_Years - 30 October 2023 - 2022.xlsx",
                                            sheet_name = "Sep_2019-2022_Applications_2")
 
-# Import the September 2019-2022 acceptances dataset
-sep_2019_2022_acceptances = pd.read_excel(r"C:\Users\keneo\Downloads\Data and Software\Overview_FullData_For_4_Academic_Years - 30 October 2023 - 2022.xlsx",
-                                          sheet_name = "Sep_2019-2022_Acceptances_2")
-
-# Import the January 2018-2021 applications dataset
+# January 2018-2021
 jan_2018_2021_applications = pd.read_excel(r"C:\Users\keneo\Downloads\Data and Software\Overview_FullData_For_4_Academic_Years - 31 January 2024 - 2021.xlsx",
                                            sheet_name = "Jan_2018-2021_Applications_2")
 
-# Import the January 2018-2021 acceptances dataset
-jan_2018_2021_acceptances = pd.read_excel(r"C:\Users\keneo\Downloads\Data and Software\Overview_FullData_For_4_Academic_Years - 31 January 2024 - 2021.xlsx",
-                                          sheet_name = "Jan_2018-2021_Acceptances_2")
-
-# Import the January 2019-2022 applications dataset
+# January 2019-2022
 jan_2019_2022_applications = pd.read_excel(r"C:\Users\keneo\Downloads\Data and Software\Overview_FullData_For_4_Academic_Years - 31 January 2024 - 2022.xlsx",
                                            sheet_name = "Jan_2019-2022_Applications_2")
 
-# Import the January 2019-2022 acceptances dataset
-jan_2019_2022_acceptances = pd.read_excel(r"C:\Users\keneo\Downloads\Data and Software\Overview_FullData_For_4_Academic_Years - 31 January 2024 - 2022.xlsx",
-                                          sheet_name = "Jan_2019-2022_Acceptances_2")
-
-
-
-
-
-# Extract all the registration records for the datasets
+# Extract all the registration records for the applications datasets
 sep_2019_registrations = sep_2017_2020_applications.iloc[:, :5]
 # Rename the "Registrations for 2019" column to "Registrations"
 sep_2019_registrations.rename(columns = {"Registrations for 2019": "Registrations"}, inplace = True)
@@ -441,20 +421,20 @@ jan_2022_registrations.rename(columns = {"Registrations for 2022": "Registration
 jan_2022_registrations["Date"] = "Jan 2022"
 
 # Merge all the registration records
-on_values_2 = ["Campus", "Group", "School / Department", "Level", "Registrations", "Date"]
-final_registrations = sep_2022_registrations.merge(sep_2021_registrations, on = on_values_2, how = "outer")
+on_values_4 = ["Campus", "Group", "School / Department", "Level", "Registrations", "Date"]
+final_registrations = sep_2022_registrations.merge(sep_2021_registrations, on = on_values_4, how = "outer")
 
-final_registrations = final_registrations.merge(sep_2020_registrations, on = on_values_2, how = "outer")
+final_registrations = final_registrations.merge(sep_2020_registrations, on = on_values_4, how = "outer")
 
-final_registrations = final_registrations.merge(sep_2019_registrations, on = on_values_2, how = "outer")
+final_registrations = final_registrations.merge(sep_2019_registrations, on = on_values_4, how = "outer")
 
-final_registrations = final_registrations.merge(jan_2022_registrations, on = on_values_2, how = "outer")
+final_registrations = final_registrations.merge(jan_2022_registrations, on = on_values_4, how = "outer")
 
-final_registrations = final_registrations.merge(jan_2021_registrations, on = on_values_2, how = "outer")
+final_registrations = final_registrations.merge(jan_2021_registrations, on = on_values_4, how = "outer")
 
-final_registrations = final_registrations.merge(jan_2020_registrations, on = on_values_2, how = "outer")
+final_registrations = final_registrations.merge(jan_2020_registrations, on = on_values_4, how = "outer")
 
-final_registrations = final_registrations.merge(jan_2019_registrations, on = on_values_2, how = "outer")
+final_registrations = final_registrations.merge(jan_2019_registrations, on = on_values_4, how = "outer")
 
 # Change the date format
 # final_registrations["Date"] = pd.to_datetime(final_registrations["Date"]).dt.date
