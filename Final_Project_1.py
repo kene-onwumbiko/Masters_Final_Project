@@ -349,6 +349,9 @@ jan_2017_2023 = jan_2020_2023.merge(jan_2017_2019, on = on_values_3, how = "oute
 # Merge the newly derived September and January 2017-2023 datasets
 final_records = sep_2017_2023.merge(jan_2017_2023, on = on_values_3, how = "outer").sort_values(by = ["Date", "Category"], ascending = False)
 
+# Save to a CSV file
+final_records.to_csv(r'final_records.csv', index = False)
+
 
 
 
@@ -449,7 +452,8 @@ final_registrations = sep_registrations.merge(jan_registrations, on = on_values_
 # Fill the missing values with -1
 final_registrations = final_registrations.fillna(-1)
 
-
+# Save to a CSV file
+final_registrations.to_csv(r'final_registrations.csv', index = False)
 
 
 
