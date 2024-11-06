@@ -429,7 +429,7 @@ jan_2022_registrations.rename(columns = {"Registrations for 2022": "Registration
 jan_2022_registrations["Date"] = "Jan 2022"
 
 # # Merge all the registration records
-# on_values_4 = ["Campus", "Group", "School / Department", "Level", "Registrations", "Date"]
+on_values_4 = ["Campus", "Group", "School / Department", "Level", "Registrations", "Date"]
 # final_registrations = sep_2022_registrations.merge(sep_2021_registrations, on = on_values_4, how = "outer")
 
 # final_registrations = final_registrations.merge(sep_2020_registrations, on = on_values_4, how = "outer")
@@ -451,8 +451,8 @@ jan_2022_registrations["Date"] = "Jan 2022"
 sep_levels_registrations = sep_2022_registrations.iloc[:, :4]
 jan_levels_registrations = jan_2022_registrations.iloc[:, :4]
 
-
-
+data = sep_levels_registrations.merge(sep_2022_registrations, on = on_values_4, how = "left")
+data = data.merge(sep_2021_registrations, on = on_values_4, how = "left")
 
 
 
