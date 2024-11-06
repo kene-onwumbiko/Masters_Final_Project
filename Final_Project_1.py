@@ -445,6 +445,8 @@ jan_registrations = jan_registrations.merge(jan_2019_registrations, on = on_valu
 
 # Merge the final September and January datasets
 final_registrations = sep_registrations.merge(jan_registrations, on = on_values_2, how = "outer").sort_values(by = "Group", ascending = False)
+
+# Fill the missing values with -1
 final_registrations = final_registrations.fillna(-1)
 
 
