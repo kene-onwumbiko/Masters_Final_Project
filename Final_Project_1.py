@@ -372,48 +372,56 @@ jan_2019_2022_applications = pd.read_excel(r"C:\Users\keneo\Downloads\Data and S
                                            sheet_name = "Jan_2019-2022_Applications_2")
 
 # Extract all the registration records for the applications datasets
+# September 2017-2020
 sep_2019_registrations = sep_2017_2020_applications.iloc[:, :5]
 # Rename the "Registrations for 2019" column to "Registrations"
 sep_2019_registrations.rename(columns = {"Registrations for 2019": "Registrations"}, inplace = True)
 # Add a Date column and fill it with 2019
 sep_2019_registrations["Date"] = "Sep 2019"
 
+# September 2018-2021
 sep_2020_registrations = sep_2018_2021_applications.iloc[:, :5]
 # Rename the "Registrations for 2020" column to "Registrations"
 sep_2020_registrations.rename(columns = {"Registrations for 2020": "Registrations"}, inplace = True)
 # Add a Date column and fill it with 2020
 sep_2020_registrations["Date"] = "Sep 2020"
 
+# September 2019-2022
 sep_2021_registrations = sep_2019_2022_applications.iloc[:, :5]
 # Rename the "Registrations for 2021" column to "Registrations"
 sep_2021_registrations.rename(columns = {"Registrations for 2021": "Registrations"}, inplace = True)
 # Add a Date column and fill it with 2021
 sep_2021_registrations["Date"] = "Sep 2021"
 
+# September 2020-2023
 sep_2022_registrations = sep_2020_2023_applications.iloc[:, :5]
 # Rename the "Registrations for 2022" column to "Registrations"
 sep_2022_registrations.rename(columns = {"Registrations for 2022": "Registrations"}, inplace = True)
 # Add a Date column and fill it with 2022
 sep_2022_registrations["Date"] = "Sep 2022"
 
+# January 2017-2020
 jan_2019_registrations = jan_2017_2020_applications.iloc[:, :5]
 # Rename the "Registrations for 2019" column to "Registrations"
 jan_2019_registrations.rename(columns = {"Registrations for 2019": "Registrations"}, inplace = True)
 # Add a Date column and fill it with 2019
 jan_2019_registrations["Date"] = "Jan 2019"
 
+# January 2018-2021
 jan_2020_registrations = jan_2018_2021_applications.iloc[:, :5]
 # Rename the "Registrations for 2020" column to "Registrations"
 jan_2020_registrations.rename(columns = {"Registrations for 2020": "Registrations"}, inplace = True)
 # Add a Date column and fill it with 2020
 jan_2020_registrations["Date"] = "Jan 2020"
 
+# January 2019-2022
 jan_2021_registrations = jan_2019_2022_applications.iloc[:, :5]
 # Rename the "Registrations for 2021" column to "Registrations"
 jan_2021_registrations.rename(columns = {"Registrations for 2021": "Registrations"}, inplace = True)
 # Add a Date column and fill it with 2021
 jan_2021_registrations["Date"] = "Jan 2021"
 
+# January 2020-2023
 jan_2022_registrations = jan_2020_2023_applications.iloc[:, :5]
 # Rename the "Registrations for 2022" column to "Registrations"
 jan_2022_registrations.rename(columns = {"Registrations for 2022": "Registrations"}, inplace = True)
@@ -443,8 +451,7 @@ final_registrations = final_registrations.merge(jan_2019_registrations, on = on_
 
 
 
-########## 
-# Merge all the final application and acceptance records
+
 
 
 
