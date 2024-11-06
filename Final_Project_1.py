@@ -428,23 +428,23 @@ jan_2022_registrations.rename(columns = {"Registrations for 2022": "Registration
 # Add a Date column and fill it with 2022
 jan_2022_registrations["Date"] = "Jan 2022"
 
-# Merge all the registration records
-on_values_4 = ["Campus", "Group", "School / Department", "Level", "Registrations", "Date"]
-final_registrations = sep_2022_registrations.merge(sep_2021_registrations, on = on_values_4, how = "outer")
+# # Merge all the registration records
+# on_values_4 = ["Campus", "Group", "School / Department", "Level", "Registrations", "Date"]
+# final_registrations = sep_2022_registrations.merge(sep_2021_registrations, on = on_values_4, how = "outer")
 
-final_registrations = final_registrations.merge(sep_2020_registrations, on = on_values_4, how = "outer")
+# final_registrations = final_registrations.merge(sep_2020_registrations, on = on_values_4, how = "outer")
 
-final_registrations = final_registrations.merge(sep_2019_registrations, on = on_values_4, how = "outer")
+# final_registrations = final_registrations.merge(sep_2019_registrations, on = on_values_4, how = "outer")
 
-final_registrations = final_registrations.merge(jan_2022_registrations, on = on_values_4, how = "outer")
+# final_registrations = final_registrations.merge(jan_2022_registrations, on = on_values_4, how = "outer")
 
-final_registrations = final_registrations.merge(jan_2021_registrations, on = on_values_4, how = "outer")
+# final_registrations = final_registrations.merge(jan_2021_registrations, on = on_values_4, how = "outer")
 
-final_registrations = final_registrations.merge(jan_2020_registrations, on = on_values_4, how = "outer")
+# final_registrations = final_registrations.merge(jan_2020_registrations, on = on_values_4, how = "outer")
 
-final_registrations = final_registrations.merge(jan_2019_registrations, on = on_values_4, how = "outer")
+# final_registrations = final_registrations.merge(jan_2019_registrations, on = on_values_4, how = "outer")
 
-# Change the date format
+# # Change the date format
 # final_registrations["Date"] = pd.to_datetime(final_registrations["Date"]).dt.date
 
 
