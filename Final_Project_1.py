@@ -93,158 +93,6 @@ sep_2017_2020 = new_sep_2017_2020_applications.merge(new_sep_2017_2020_acceptanc
 
 
 
-########## SEPTEMBER 2018-2021 APPLICATIONS DATASET ##########
-# Import the September 2018-2021 applications dataset
-sep_2018_2021_applications = pd.read_excel(r"C:\Users\keneo\Downloads\Data and Software\Overview_FullData_For_4_Academic_Years - 30 October 2023 - 2021.xlsx",
-                                           sheet_name = "Sep_2018-2021_Applications_2")
-
-# Unpivot the September 2018-2021 applications dataset
-new_sep_2018_2021_applications = sep_2018_2021_applications.melt(id_vars = id_vars, value_vars = value_vars, 
-                                                                 var_name = "Category", 
-                                                                 value_name = "Number of Applications")
-
-# Create a function to get the Date based on "Category" and also modify "Category"
-def get_date_sep_2018_2021(row):
-    category = row["Category"]
-    if category == "Home":
-        row["Date"] = "Sep 2021"
-    elif category == "Home.1":
-        row["Date"] = "Sep 2020"
-        row["Category"] = "Home"
-    elif category == "Home.2":
-        row["Date"] = "Sep 2019"
-        row["Category"] = "Home"
-    elif category == "Home.3":
-        row["Date"] = "Sep 2018"
-        row["Category"] = "Home"
-    elif category == "Overseas":
-        row["Date"] = "Sep 2021"
-    elif category == "Overseas.1":
-        row["Date"] = "Sep 2020"
-        row["Category"] = "Overseas"
-    elif category == "Overseas.2":
-        row["Date"] = "Sep 2019"
-        row["Category"] = "Overseas"
-    elif category == "Overseas.3":
-        row["Date"] = "Sep 2018"
-        row["Category"] = "Overseas"
-    elif category == "Unknown":
-        row["Date"] = "Sep 2021"
-    elif category == "Unknown.1":
-        row["Date"] = "Sep 2020"
-        row["Category"] = "Unknown"
-    elif category == "Unknown.2":
-        row["Date"] = "Sep 2019"
-        row["Category"] = "Unknown"
-    elif category == "Unknown.3":
-        row["Date"] = "Sep 2018"
-        row["Category"] = "Unknown"
-    return row
-
-# Apply the function to the September 2018-2021 applications dataset
-new_sep_2018_2021_applications = new_sep_2018_2021_applications.apply(get_date_sep_2018_2021, axis = 1)
-
-
-
-
-
-########## SEPTEMBER 2018-2021 ACCEPTANCES DATASET ##########
-# Import the September 2018-2021 acceptances dataset
-sep_2018_2021_acceptances = pd.read_excel(r"C:\Users\keneo\Downloads\Data and Software\Overview_FullData_For_4_Academic_Years - 30 October 2023 - 2021.xlsx",
-                                          sheet_name = "Sep_2018-2021_Acceptances_2")
-
-# Unpivot the September 2018-2021 acceptances dataset
-new_sep_2018_2021_acceptances = sep_2018_2021_acceptances.melt(id_vars = id_vars, value_vars = value_vars, 
-                                                               var_name = "Category", 
-                                                               value_name = "Number of Acceptances")
-
-# Apply the function to the September 2018-2021 acceptances dataset
-new_sep_2018_2021_acceptances = new_sep_2018_2021_acceptances.apply(get_date_sep_2018_2021, axis = 1)
-
-# Merge the applications and acceptance datasets
-sep_2018_2021 = new_sep_2018_2021_applications.merge(new_sep_2018_2021_acceptances, on = on_values, 
-                                                     how = "outer")
-
-
-
-
-
-########## SEPTEMBER 2019-2022 APPLICATIONS DATASET ##########
-# Import the September 2019-2022 applications dataset
-sep_2019_2022_applications = pd.read_excel(r"C:\Users\keneo\Downloads\Data and Software\Overview_FullData_For_4_Academic_Years - 30 October 2023 - 2022.xlsx",
-                                           sheet_name = "Sep_2019-2022_Applications_2")
-
-# Unpivot the September 2019-2022 applications dataset
-new_sep_2019_2022_applications = sep_2019_2022_applications.melt(id_vars = id_vars, value_vars = value_vars, 
-                                                                 var_name = "Category", 
-                                                                 value_name = "Number of Applications")
-
-# Create a function to get the Date based on "Category" and also modify "Category"
-def get_date_sep_2019_2022(row):
-    category = row["Category"]
-    if category == "Home":
-        row["Date"] = "Sep 2022"
-    elif category == "Home.1":
-        row["Date"] = "Sep 2021"
-        row["Category"] = "Home"
-    elif category == "Home.2":
-        row["Date"] = "Sep 2020"
-        row["Category"] = "Home"
-    elif category == "Home.3":
-        row["Date"] = "Sep 2019"
-        row["Category"] = "Home"
-    elif category == "Overseas":
-        row["Date"] = "Sep 2022"
-    elif category == "Overseas.1":
-        row["Date"] = "Sep 2021"
-        row["Category"] = "Overseas"
-    elif category == "Overseas.2":
-        row["Date"] = "Sep 2020"
-        row["Category"] = "Overseas"
-    elif category == "Overseas.3":
-        row["Date"] = "Sep 2019"
-        row["Category"] = "Overseas"
-    elif category == "Unknown":
-        row["Date"] = "Sep 2022"
-    elif category == "Unknown.1":
-        row["Date"] = "Sep 2021"
-        row["Category"] = "Unknown"
-    elif category == "Unknown.2":
-        row["Date"] = "Sep 2020"
-        row["Category"] = "Unknown"
-    elif category == "Unknown.3":
-        row["Date"] = "Sep 2019"
-        row["Category"] = "Unknown"
-    return row
-
-# Apply the function to the September 2019-2022 applications dataset
-new_sep_2019_2022_applications = new_sep_2019_2022_applications.apply(get_date_sep_2019_2022, axis = 1)
-
-
-
-
-
-########## SEPTEMBER 2019-2022 ACCEPTANCES DATASET ##########
-# Import the September 2019-2022 acceptances dataset
-sep_2019_2022_acceptances = pd.read_excel(r"C:\Users\keneo\Downloads\Data and Software\Overview_FullData_For_4_Academic_Years - 30 October 2023 - 2022.xlsx",
-                                          sheet_name = "Sep_2019-2022_Acceptances_2")
-
-# Unpivot the September 2019-2022 acceptances dataset
-new_sep_2019_2022_acceptances = sep_2019_2022_acceptances.melt(id_vars = id_vars, value_vars = value_vars, 
-                                                               var_name = "Category", 
-                                                               value_name = "Number of Acceptances")
-
-# Apply the function to the September 2019-2022 acceptances dataset
-new_sep_2019_2022_acceptances = new_sep_2019_2022_acceptances.apply(get_date_sep_2019_2022, axis = 1)
-
-# Merge the applications and acceptance datasets
-sep_2019_2022 = new_sep_2019_2022_applications.merge(new_sep_2019_2022_acceptances, on = on_values, 
-                                                     how = "outer")
-
-
-
-
-
 ########## SEPTEMBER 2020-2023 APPLICATIONS DATASET ##########
 # Import the September 2020-2023 applications dataset
 sep_2020_2023_applications = pd.read_excel(r"C:\Users\keneo\Downloads\Data and Software\Overview_FullData_For_4_Academic_Years - 30 October 2023 - 2023.xlsx",
@@ -397,158 +245,6 @@ jan_2017_2020 = new_jan_2017_2020_applications.merge(new_jan_2017_2020_acceptanc
 
 
 
-########## JANUARY 2018-2021 APPLICATIONS DATASET ##########
-# Import the January 2018-2021 applications dataset
-jan_2018_2021_applications = pd.read_excel(r"C:\Users\keneo\Downloads\Data and Software\Overview_FullData_For_4_Academic_Years - 31 January 2024 - 2021.xlsx",
-                                           sheet_name = "Jan_2018-2021_Applications_2")
-
-# Unpivot the January 2018-2021 applications dataset
-new_jan_2018_2021_applications = jan_2018_2021_applications.melt(id_vars = id_vars, value_vars = value_vars, 
-                                                                 var_name = "Category", 
-                                                                 value_name = "Number of Applications")
-
-# Create a function to get the Date based on "Category" and also modify "Category"
-def get_date_jan_2018_2021(row):
-    category = row["Category"]
-    if category == "Home":
-        row["Date"] = "Jan 2021"
-    elif category == "Home.1":
-        row["Date"] = "Jan 2020"
-        row["Category"] = "Home"
-    elif category == "Home.2":
-        row["Date"] = "Jan 2019"
-        row["Category"] = "Home"
-    elif category == "Home.3":
-        row["Date"] = "Jan 2018"
-        row["Category"] = "Home"
-    elif category == "Overseas":
-        row["Date"] = "Jan 2021"
-    elif category == "Overseas.1":
-        row["Date"] = "Jan 2020"
-        row["Category"] = "Overseas"
-    elif category == "Overseas.2":
-        row["Date"] = "Jan 2019"
-        row["Category"] = "Overseas"
-    elif category == "Overseas.3":
-        row["Date"] = "Jan 2018"
-        row["Category"] = "Overseas"
-    elif category == "Unknown":
-        row["Date"] = "Jan 2021"
-    elif category == "Unknown.1":
-        row["Date"] = "Jan 2020"
-        row["Category"] = "Unknown"
-    elif category == "Unknown.2":
-        row["Date"] = "Jan 2019"
-        row["Category"] = "Unknown"
-    elif category == "Unknown.3":
-        row["Date"] = "Jan 2018"
-        row["Category"] = "Unknown"
-    return row
-
-# Apply the function to the January 2018-2021 applications dataset
-new_jan_2018_2021_applications = new_jan_2018_2021_applications.apply(get_date_jan_2018_2021, axis = 1)
-
-
-
-
-
-########## JANUARY 2018-2021 ACCEPTANCES DATASET ##########
-# Import the January 2018-2021 acceptances dataset
-jan_2018_2021_acceptances = pd.read_excel(r"C:\Users\keneo\Downloads\Data and Software\Overview_FullData_For_4_Academic_Years - 31 January 2024 - 2021.xlsx",
-                                          sheet_name = "Jan_2018-2021_Acceptances_2")
-
-# Unpivot the January 2018-2021 acceptances dataset
-new_jan_2018_2021_acceptances = jan_2018_2021_acceptances.melt(id_vars = id_vars, value_vars = value_vars, 
-                                                               var_name = "Category", 
-                                                               value_name = "Number of Acceptances")
-
-# Apply the function to the January 2018-2021 acceptances dataset
-new_jan_2018_2021_acceptances = new_jan_2018_2021_acceptances.apply(get_date_jan_2018_2021, axis = 1)
-
-# Merge the applications and acceptance datasets
-jan_2018_2021 = new_jan_2018_2021_applications.merge(new_jan_2018_2021_acceptances, on = on_values, 
-                                                     how = "outer")
-
-
-
-
-
-########## JANUARY 2019-2022 APPLICATIONS DATASET ##########
-# Import the January 2019-2022 applications dataset
-jan_2019_2022_applications = pd.read_excel(r"C:\Users\keneo\Downloads\Data and Software\Overview_FullData_For_4_Academic_Years - 31 January 2024 - 2022.xlsx",
-                                           sheet_name = "Jan_2019-2022_Applications_2")
-
-# Unpivot the January 2019-2022 applications dataset
-new_jan_2019_2022_applications = jan_2019_2022_applications.melt(id_vars = id_vars, value_vars = value_vars, 
-                                                                 var_name = "Category", 
-                                                                 value_name = "Number of Applications")
-
-# Create a function to get the Date based on "Category" and also modify "Category"
-def get_date_jan_2019_2022(row):
-    category = row["Category"]
-    if category == "Home":
-        row["Date"] = "Jan 2022"
-    elif category == "Home.1":
-        row["Date"] = "Jan 2021"
-        row["Category"] = "Home"
-    elif category == "Home.2":
-        row["Date"] = "Jan 2020"
-        row["Category"] = "Home"
-    elif category == "Home.3":
-        row["Date"] = "Jan 2019"
-        row["Category"] = "Home"
-    elif category == "Overseas":
-        row["Date"] = "Jan 2022"
-    elif category == "Overseas.1":
-        row["Date"] = "Jan 2021"
-        row["Category"] = "Overseas"
-    elif category == "Overseas.2":
-        row["Date"] = "Jan 2020"
-        row["Category"] = "Overseas"
-    elif category == "Overseas.3":
-        row["Date"] = "Jan 2019"
-        row["Category"] = "Overseas"
-    elif category == "Unknown":
-        row["Date"] = "Jan 2022"
-    elif category == "Unknown.1":
-        row["Date"] = "Jan 2021"
-        row["Category"] = "Unknown"
-    elif category == "Unknown.2":
-        row["Date"] = "Jan 2020"
-        row["Category"] = "Unknown"
-    elif category == "Unknown.3":
-        row["Date"] = "Jan 2019"
-        row["Category"] = "Unknown"
-    return row
-
-# Apply the function to the January 2019-2022 applications dataset
-new_jan_2019_2022_applications = new_jan_2019_2022_applications.apply(get_date_jan_2019_2022, axis = 1)
-
-
-
-
-
-########## JANUARY 2019-2022 ACCEPTANCES DATASET ##########
-# Import the January 2019-2022 acceptances dataset
-jan_2019_2022_acceptances = pd.read_excel(r"C:\Users\keneo\Downloads\Data and Software\Overview_FullData_For_4_Academic_Years - 31 January 2024 - 2022.xlsx",
-                                          sheet_name = "Jan_2019-2022_Acceptances_2")
-
-# Unpivot the January 2019-2022 acceptances dataset
-new_jan_2019_2022_acceptances = jan_2019_2022_acceptances.melt(id_vars = id_vars, value_vars = value_vars, 
-                                                               var_name = "Category", 
-                                                               value_name = "Number of Acceptances")
-
-# Apply the function to the January 2019-2022 acceptances dataset
-new_jan_2019_2022_acceptances = new_jan_2019_2022_acceptances.apply(get_date_jan_2019_2022, axis = 1)
-
-# Merge the applications and acceptance datasets
-jan_2019_2022 = new_jan_2019_2022_applications.merge(new_jan_2019_2022_acceptances, on = on_values, 
-                                                     how = "outer")
-
-
-
-
-
 ########## JANUARY 2020-2023 APPLICATIONS DATASET ##########
 # Import the January 2020-2023 applications dataset
 jan_2020_2023_applications = pd.read_excel(r"C:\Users\keneo\Downloads\Data and Software\Overview_FullData_For_4_Academic_Years - 31 January 2024 - 2023.xlsx",
@@ -630,7 +326,71 @@ jan_2020_2023 = new_jan_2020_2023_applications.merge(new_jan_2020_2023_acceptanc
 
 
 
+
+########## GET THE FINAL RECORDS FOR APPLICATIONS AND ACCEPTANCES ##########
+# Get the levels for the 2020-2023 datasets
+sep_levels_2020_2023 = sep_2020_2023.iloc[:, :4]
+jan_levels_2020_2023 = jan_2020_2023.iloc[:, :4]
+
+# Merge the extracted levels with the 2017-2020 datasets
+on_values_2 = ["Campus", "Group", "School / Department", "Level"]
+new_sep_2017_2020 = sep_levels_2020_2023.merge(sep_2017_2020, on = on_values_2, how = "left").drop_duplicates().dropna().sort_values(by = ["Date", "Group"], ascending = False)
+new_jan_2017_2020 = jan_levels_2020_2023.merge(jan_2017_2020, on = on_values_2, how = "left").drop_duplicates().dropna().sort_values(by = ["Date", "Group"], ascending = False)
+
+# Delete the rows with "Date" column = "Sep 2020"
+sep_2017_2019 = new_sep_2017_2020[new_sep_2017_2020["Date"] != "Sep 2020"]
+jan_2017_2019 = new_jan_2017_2020[new_jan_2017_2020["Date"] != "Sep 2020"]
+
+# Merge the newly derived 2017-2019 datasets with the 2020-2023 datasets
+on_values_3 = ["Campus", "Group", "School / Department", "Level", "Category", "Number of Applications", "Date", "Number of Acceptances"]
+sep_2017_2023 = sep_2020_2023.merge(sep_2017_2019, on = on_values_3, how = "outer")
+jan_2017_2023 = jan_2020_2023.merge(jan_2017_2019, on = on_values_3, how = "outer")
+
+# Merge the newly derived September and January 2017-2023 datasets
+final_records = sep_2017_2023.merge(jan_2017_2023, on = on_values_3, how = "outer").sort_values(by = ["Date", "Category"], ascending = False)
+
+
+
+
+
+
 ########## GET ALL THE REGISTRATION RECORDS ##########
+# Import the September 2018-2021 applications dataset
+sep_2018_2021_applications = pd.read_excel(r"C:\Users\keneo\Downloads\Data and Software\Overview_FullData_For_4_Academic_Years - 30 October 2023 - 2021.xlsx",
+                                           sheet_name = "Sep_2018-2021_Applications_2")
+
+# Import the September 2018-2021 acceptances dataset
+sep_2018_2021_acceptances = pd.read_excel(r"C:\Users\keneo\Downloads\Data and Software\Overview_FullData_For_4_Academic_Years - 30 October 2023 - 2021.xlsx",
+                                          sheet_name = "Sep_2018-2021_Acceptances_2")
+
+# Import the September 2019-2022 applications dataset
+sep_2019_2022_applications = pd.read_excel(r"C:\Users\keneo\Downloads\Data and Software\Overview_FullData_For_4_Academic_Years - 30 October 2023 - 2022.xlsx",
+                                           sheet_name = "Sep_2019-2022_Applications_2")
+
+# Import the September 2019-2022 acceptances dataset
+sep_2019_2022_acceptances = pd.read_excel(r"C:\Users\keneo\Downloads\Data and Software\Overview_FullData_For_4_Academic_Years - 30 October 2023 - 2022.xlsx",
+                                          sheet_name = "Sep_2019-2022_Acceptances_2")
+
+# Import the January 2018-2021 applications dataset
+jan_2018_2021_applications = pd.read_excel(r"C:\Users\keneo\Downloads\Data and Software\Overview_FullData_For_4_Academic_Years - 31 January 2024 - 2021.xlsx",
+                                           sheet_name = "Jan_2018-2021_Applications_2")
+
+# Import the January 2018-2021 acceptances dataset
+jan_2018_2021_acceptances = pd.read_excel(r"C:\Users\keneo\Downloads\Data and Software\Overview_FullData_For_4_Academic_Years - 31 January 2024 - 2021.xlsx",
+                                          sheet_name = "Jan_2018-2021_Acceptances_2")
+
+# Import the January 2019-2022 applications dataset
+jan_2019_2022_applications = pd.read_excel(r"C:\Users\keneo\Downloads\Data and Software\Overview_FullData_For_4_Academic_Years - 31 January 2024 - 2022.xlsx",
+                                           sheet_name = "Jan_2019-2022_Applications_2")
+
+# Import the January 2019-2022 acceptances dataset
+jan_2019_2022_acceptances = pd.read_excel(r"C:\Users\keneo\Downloads\Data and Software\Overview_FullData_For_4_Academic_Years - 31 January 2024 - 2022.xlsx",
+                                          sheet_name = "Jan_2019-2022_Acceptances_2")
+
+
+
+
+
 # Extract all the registration records for the datasets
 sep_2019_registrations = sep_2017_2020_applications.iloc[:, :5]
 # Rename the "Registrations for 2019" column to "Registrations"
@@ -711,22 +471,6 @@ final_registrations = final_registrations.merge(jan_2019_registrations, on = on_
 
 
 
-sep_levels_2020_2023 = sep_2020_2023.iloc[:, :4]
-jan_levels_2020_2023 = jan_2020_2023.iloc[:, :4]
-
-on_values_3 = ["Campus", "Group", "School / Department", "Level"]
-new_sep_2017_2020 = sep_levels_2020_2023.merge(sep_2017_2020, on = on_values_3, how = "left").drop_duplicates().dropna().sort_values(by = ["Date", "Group"], ascending = False)
-sep_2017_2019 = new_sep_2017_2020[new_sep_2017_2020["Date"] != "Sep 2020"]
-
-new_jan_2017_2020 = jan_levels_2020_2023.merge(jan_2017_2020, on = on_values_3, how = "left").drop_duplicates().dropna().sort_values(by = ["Date", "Group"], ascending = False)
-jan_2017_2019 = new_jan_2017_2020[new_jan_2017_2020["Date"] != "Sep 2020"]
-
-on_values_4 = ["Campus", "Group", "School / Department", "Level", "Category", "Number of Applications", "Date", "Number of Acceptances"]
-sep_2017_2023 = sep_2020_2023.merge(sep_2017_2019, on = on_values_4, how = "outer")
-
-jan_2017_2023 = jan_2020_2023.merge(jan_2017_2019, on = on_values_4, how = "outer")
-
-final_records = sep_2017_2023.merge(jan_2017_2023, on = on_values_4, how = "outer").sort_values(by = ["Date", "Category"], ascending = False)
 
 
 
