@@ -350,7 +350,7 @@ jan_2017_2023 = jan_2020_2023.merge(jan_2017_2019, on = on_values_3, how = "oute
 final_records = sep_2017_2023.merge(jan_2017_2023, on = on_values_3, how = "outer").sort_values(by = ["Date", "Category"], ascending = [False, True])
 
 # Change the Date format
-final_records["Date"] = pd.to_datetime(final_records["Date"]).dt.date
+final_records["Date"] = pd.to_datetime(final_records["Date"]).dt.to_period('M')
 
 # Save to a CSV file
 final_records.to_csv(r'final_records.csv', index = False)
