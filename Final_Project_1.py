@@ -347,7 +347,10 @@ sep_2017_2023 = sep_2020_2023.merge(sep_2017_2019, on = on_values_3, how = "oute
 jan_2017_2023 = jan_2020_2023.merge(jan_2017_2019, on = on_values_3, how = "outer")
 
 # Merge the newly derived September and January 2017-2023 datasets
-final_records = sep_2017_2023.merge(jan_2017_2023, on = on_values_3, how = "outer").sort_values(by = ["Date", "Category"], ascending = False)
+final_records = sep_2017_2023.merge(jan_2017_2023, on = on_values_3, how = "outer").sort_values(by = ["Date", "Category"], ascending = [False, True])
+
+# Change the Date format
+final_records["Date"] = pd.to_datetime(final_records["Date"]).dt.date
 
 # Save to a CSV file
 final_records.to_csv(r'final_records.csv', index = False)
@@ -447,7 +450,7 @@ jan_registrations = jan_registrations.merge(jan_2020_registrations, on = on_valu
 jan_registrations = jan_registrations.merge(jan_2019_registrations, on = on_values_2, how = "left")
 
 # Merge the final September and January datasets
-final_registrations = sep_registrations.merge(jan_registrations, on = on_values_2, how = "outer").sort_values(by = "Group", ascending = False)
+final_registrations = sep_registrations.merge(jan_registrations, on = on_values_2, how = "outer").sort_values(by = ["Group", "School / Department"], ascending = [False, True])
 
 # Fill the missing values with -1
 final_registrations = final_registrations.fillna(-1)
