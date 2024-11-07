@@ -349,8 +349,8 @@ jan_2017_2023 = jan_2020_2023.merge(jan_2017_2019, on = on_values_3, how = "oute
 # Merge the newly derived September and January 2017-2023 datasets
 final_records = sep_2017_2023.merge(jan_2017_2023, on = on_values_3, how = "outer").sort_values(by = ["Date", "Category"], ascending = [False, True])
 
-# Change the Date format
-final_records["Date"] = pd.to_datetime(final_records["Date"]).dt.to_period('M')
+# Split the Date column into Month and Year columns
+final_records[["Month", "Year"]] = final_records["Date"].str.split(" ", expand = True)
 
 # Save to a CSV file
 final_records.to_csv(r'final_records.csv', index = False)
@@ -462,8 +462,18 @@ final_registrations = final_registrations.melt(id_vars = id_vars, value_vars = v
 # Fill the missing values with -1
 final_registrations = final_registrations.fillna(-1)
 
+# Split the Date column into Month and Year columns
+final_registrations[["Month", "Year"]] = final_registrations["Date"].str.split(" ", expand = True)
+
 # Save to a CSV file
 final_registrations.to_csv(r'final_registrations.csv', index = False)
+
+
+
+
+
+
+
 
 
 
