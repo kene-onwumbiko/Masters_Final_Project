@@ -1,56 +1,441 @@
-Campus,Group,School / Department,Level,Registrations for Sep 2022,Registrations for Sep 2021,Registrations for Sep 2020,Registrations for Sep 2019,Registrations for Jan 2022,Registrations for Jan 2021,Registrations for Jan 2020,Registrations for Jan 2019
-Buckingham,Non Foundation (1+2) and Non Foundation,Accounting and Finance,Postgraduate Research,0.0,-1.0,-1.0,-1.0,-1.0,-1.0,-1.0,-1.0
-Buckingham,Non Foundation (1+2) and Non Foundation,Accounting and Finance,Postgraduate Taught,5.0,4.0,2.0,4.0,9.0,7.0,9.0,3.0
-Buckingham,Non Foundation (1+2) and Non Foundation,Accounting and Finance,Undergraduate,6.0,5.0,9.0,13.0,2.0,5.0,5.0,9.0
-Buckingham,Non Foundation (1+2) and Non Foundation,Buckingham Enterprise and Innovation Unit,Postgraduate Taught,-1.0,-1.0,-1.0,-1.0,0.0,7.0,0.0,-1.0
-Buckingham,Non Foundation (1+2) and Non Foundation,Centre for Foundation Studies,Non Degree Leading to Postgraduate Taught,0.0,0.0,2.0,0.0,-1.0,-1.0,-1.0,-1.0
-Buckingham,Non Foundation (1+2) and Non Foundation,Economics and International Studies,Postgraduate Research,4.0,7.0,3.0,2.0,4.0,8.0,2.0,1.0
-Buckingham,Non Foundation (1+2) and Non Foundation,Economics and International Studies,Postgraduate Taught,14.0,20.0,16.0,13.0,18.0,41.0,24.0,18.0
-Buckingham,Non Foundation (1+2) and Non Foundation,Economics and International Studies,Undergraduate,29.0,24.0,18.0,44.0,13.0,18.0,15.0,28.0
-Buckingham,Non Foundation (1+2) and Non Foundation,Economics and International Studies,Occassional Non Degree,-1.0,-1.0,-1.0,-1.0,0.0,1.0,0.0,0.0
-Buckingham,Non Foundation (1+2) and Non Foundation,Economics and International Studies,Visiting Students Non Degree,-1.0,-1.0,-1.0,-1.0,1.0,0.0,1.0,0.0
-Buckingham,Non Foundation (1+2) and Non Foundation,English and Digital Media,Postgraduate Research,3.0,6.0,5.0,4.0,6.0,5.0,6.0,5.0
-Buckingham,Non Foundation (1+2) and Non Foundation,English and Digital Media,Undergraduate,10.0,8.0,7.0,15.0,6.0,7.0,12.0,12.0
-Buckingham,Non Foundation (1+2) and Non Foundation,English and Digital Media,Visiting Students Non Degree,-1.0,-1.0,-1.0,-1.0,0.0,0.0,14.0,0.0
-Buckingham,Non Foundation (1+2) and Non Foundation,Enterprise and Entrepreneurship,Postgraduate Taught,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-Buckingham,Non Foundation (1+2) and Non Foundation,Enterprise and Entrepreneurship,Undergraduate,4.0,4.0,5.0,6.0,1.0,2.0,3.0,10.0
-Buckingham,Non Foundation (1+2) and Non Foundation,History and History of Art,Postgraduate Research,10.0,8.0,3.0,5.0,5.0,2.0,2.0,0.0
-Buckingham,Non Foundation (1+2) and Non Foundation,History and History of Art,Postgraduate Taught,12.0,11.0,8.0,8.0,1.0,3.0,2.0,2.0
-Buckingham,Non Foundation (1+2) and Non Foundation,History and History of Art,Undergraduate,3.0,2.0,2.0,10.0,0.0,3.0,4.0,1.0
-Buckingham,Non Foundation (1+2) and Non Foundation,London,Occassional Non Degree,21.0,20.0,6.0,13.0,1.0,5.0,0.0,2.0
-Buckingham,Non Foundation (1+2) and Non Foundation,London,Postgraduate Research,42.0,53.0,37.0,52.0,5.0,5.0,1.0,3.0
-Buckingham,Non Foundation (1+2) and Non Foundation,London,Postgraduate Taught,0.0,0.0,4.0,14.0,9.0,17.0,0.0,-1.0
-Buckingham,Non Foundation (1+2) and Non Foundation,Management,Occassional Non Degree,0.0,0.0,0.0,26.0,0.0,0.0,-1.0,-1.0
-Buckingham,Non Foundation (1+2) and Non Foundation,Management,Postgraduate Research,1.0,1.0,0.0,0.0,0.0,1.0,6.0,2.0
-Buckingham,Non Foundation (1+2) and Non Foundation,Management,Postgraduate Taught,12.0,7.0,11.0,13.0,21.0,25.0,15.0,32.0
-Buckingham,Non Foundation (1+2) and Non Foundation,Management,Undergraduate,21.0,14.0,23.0,37.0,6.0,10.0,16.0,20.0
-Buckingham,Non Foundation (1+2) and Non Foundation,Management,Visiting Students Non Degree,0.0,0.0,0.0,0.0,-1.0,-1.0,-1.0,-1.0
-Buckingham,Non Foundation (1+2) and Non Foundation,Management,Executive Non Degree,-1.0,-1.0,-1.0,-1.0,0.0,0.0,0.0,4.0
-Buckingham,Non Foundation (1+2) and Non Foundation,Modern Foreign Languages,Undergraduate,0.0,1.0,2.0,0.0,0.0,1.0,3.0,0.0
-Buckingham,Non Foundation (1+2) and Non Foundation,Modern Foreign Languages,Occassional Non Degree,-1.0,-1.0,-1.0,-1.0,1.0,0.0,-1.0,-1.0
-Buckingham,Non Foundation (1+2) and Non Foundation,School of Computing,Non Degree Apprentice,33.0,22.0,13.0,47.0,-1.0,-1.0,-1.0,-1.0
-Buckingham,Non Foundation (1+2) and Non Foundation,School of Computing,Postgraduate Research,4.0,0.0,1.0,3.0,2.0,2.0,2.0,2.0
-Buckingham,Non Foundation (1+2) and Non Foundation,School of Computing,Postgraduate Taught,3.0,1.0,3.0,0.0,37.0,18.0,19.0,2.0
-Buckingham,Non Foundation (1+2) and Non Foundation,School of Computing,Undergraduate,70.0,10.0,10.0,18.0,9.0,13.0,8.0,6.0
-Buckingham,Non Foundation (1+2) and Non Foundation,School of Education,Occassional Non Degree,15.0,24.0,20.0,25.0,8.0,1.0,2.0,7.0
-Buckingham,Non Foundation (1+2) and Non Foundation,School of Education,Postgraduate Research,7.0,6.0,8.0,9.0,9.0,3.0,0.0,0.0
-Buckingham,Non Foundation (1+2) and Non Foundation,School of Education,Postgraduate Taught,922.0,1138.0,840.0,789.0,30.0,80.0,0.0,0.0
-Buckingham,Non Foundation (1+2) and Non Foundation,School of Law,Postgraduate Research,1.0,1.0,0.0,3.0,1.0,1.0,0.0,3.0
-Buckingham,Non Foundation (1+2) and Non Foundation,School of Law,Postgraduate Taught,5.0,0.0,4.0,2.0,12.0,15.0,14.0,20.0
-Buckingham,Non Foundation (1+2) and Non Foundation,School of Law,Undergraduate,50.0,52.0,54.0,59.0,22.0,29.0,38.0,29.0
-Buckingham,Non Foundation (1+2) and Non Foundation,School of Postgraduate Medicine,Postgraduate Research,0.0,0.0,1.0,0.0,1.0,0.0,0.0,1.0
-Buckingham,Non Foundation (1+2) and Non Foundation,School of Postgraduate Medicine,Postgraduate Taught,32.0,32.0,18.0,1.0,25.0,29.0,11.0,0.0
-Buckingham,Non Foundation (1+2) and Non Foundation,School of Psychology,Postgraduate Research,1.0,5.0,5.0,2.0,3.0,7.0,5.0,2.0
-Buckingham,Non Foundation (1+2) and Non Foundation,School of Psychology,Postgraduate Taught,3.0,4.0,5.0,3.0,6.0,11.0,6.0,6.0
-Buckingham,Non Foundation (1+2) and Non Foundation,School of Psychology,Undergraduate,19.0,19.0,46.0,40.0,12.0,19.0,17.0,25.0
-Buckingham,Non Foundation (1+2) and Non Foundation,School of UG Medicine,Undergraduate,-1.0,-1.0,-1.0,-1.0,132.0,127.0,131.0,92.0
-Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,Accounting and Finance,Foundation Undergraduate (1+2),4.0,3.0,5.0,6.0,1.0,2.0,1.0,0.0
-Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,Centre for Foundation Studies,Foundation Non Degree,3.0,17.0,19.0,14.0,14.0,8.0,10.0,18.0
-Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,Economics and International Studies,Foundation Undergraduate (1+2),2.0,6.0,3.0,5.0,1.0,3.0,6.0,1.0
-Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,English and Digital Media,Foundation Undergraduate (1+2),0.0,2.0,2.0,0.0,3.0,1.0,0.0,0.0
-Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,Enterprise and Entrepreneurship,Foundation Undergraduate (1+2),0.0,0.0,-1.0,-1.0,0.0,-1.0,-1.0,-1.0
-Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,Management,Foundation Undergraduate (1+2),10.0,9.0,15.0,9.0,6.0,17.0,9.0,8.0
-Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,School of Computing,Foundation Non Degree,0.0,4.0,1.0,2.0,-1.0,-1.0,-1.0,-1.0
-Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,School of Computing,Foundation Undergraduate (1+2),1.0,3.0,7.0,2.0,7.0,2.0,3.0,1.0
-Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,School of Law,Foundation Undergraduate (1+2),19.0,13.0,8.0,15.0,8.0,10.0,5.0,3.0
-Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,School of Psychology,Foundation Undergraduate (1+2),7.0,5.0,8.0,1.0,3.0,4.0,3.0,0.0
+Campus,Group,School / Department,Level,Date,Number of Registrations
+Buckingham,Non Foundation (1+2) and Non Foundation,Accounting and Finance,Postgraduate Research,Sep 2022,0.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Accounting and Finance,Postgraduate Taught,Sep 2022,5.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Accounting and Finance,Undergraduate,Sep 2022,6.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Buckingham Enterprise and Innovation Unit,Postgraduate Taught,Sep 2022,-1.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Centre for Foundation Studies,Non Degree Leading to Postgraduate Taught,Sep 2022,0.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Economics and International Studies,Postgraduate Research,Sep 2022,4.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Economics and International Studies,Postgraduate Taught,Sep 2022,14.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Economics and International Studies,Undergraduate,Sep 2022,29.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Economics and International Studies,Occassional Non Degree,Sep 2022,-1.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Economics and International Studies,Visiting Students Non Degree,Sep 2022,-1.0
+Buckingham,Non Foundation (1+2) and Non Foundation,English and Digital Media,Postgraduate Research,Sep 2022,3.0
+Buckingham,Non Foundation (1+2) and Non Foundation,English and Digital Media,Undergraduate,Sep 2022,10.0
+Buckingham,Non Foundation (1+2) and Non Foundation,English and Digital Media,Visiting Students Non Degree,Sep 2022,-1.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Enterprise and Entrepreneurship,Postgraduate Taught,Sep 2022,0.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Enterprise and Entrepreneurship,Undergraduate,Sep 2022,4.0
+Buckingham,Non Foundation (1+2) and Non Foundation,History and History of Art,Postgraduate Research,Sep 2022,10.0
+Buckingham,Non Foundation (1+2) and Non Foundation,History and History of Art,Postgraduate Taught,Sep 2022,12.0
+Buckingham,Non Foundation (1+2) and Non Foundation,History and History of Art,Undergraduate,Sep 2022,3.0
+Buckingham,Non Foundation (1+2) and Non Foundation,London,Occassional Non Degree,Sep 2022,21.0
+Buckingham,Non Foundation (1+2) and Non Foundation,London,Postgraduate Research,Sep 2022,42.0
+Buckingham,Non Foundation (1+2) and Non Foundation,London,Postgraduate Taught,Sep 2022,0.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Management,Occassional Non Degree,Sep 2022,0.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Management,Postgraduate Research,Sep 2022,1.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Management,Postgraduate Taught,Sep 2022,12.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Management,Undergraduate,Sep 2022,21.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Management,Visiting Students Non Degree,Sep 2022,0.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Management,Executive Non Degree,Sep 2022,-1.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Modern Foreign Languages,Undergraduate,Sep 2022,0.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Modern Foreign Languages,Occassional Non Degree,Sep 2022,-1.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Computing,Non Degree Apprentice,Sep 2022,33.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Computing,Postgraduate Research,Sep 2022,4.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Computing,Postgraduate Taught,Sep 2022,3.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Computing,Undergraduate,Sep 2022,70.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Education,Occassional Non Degree,Sep 2022,15.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Education,Postgraduate Research,Sep 2022,7.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Education,Postgraduate Taught,Sep 2022,922.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Law,Postgraduate Research,Sep 2022,1.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Law,Postgraduate Taught,Sep 2022,5.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Law,Undergraduate,Sep 2022,50.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Postgraduate Medicine,Postgraduate Research,Sep 2022,0.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Postgraduate Medicine,Postgraduate Taught,Sep 2022,32.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Psychology,Postgraduate Research,Sep 2022,1.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Psychology,Postgraduate Taught,Sep 2022,3.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Psychology,Undergraduate,Sep 2022,19.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of UG Medicine,Undergraduate,Sep 2022,-1.0
+Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,Accounting and Finance,Foundation Undergraduate (1+2),Sep 2022,4.0
+Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,Centre for Foundation Studies,Foundation Non Degree,Sep 2022,3.0
+Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,Economics and International Studies,Foundation Undergraduate (1+2),Sep 2022,2.0
+Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,English and Digital Media,Foundation Undergraduate (1+2),Sep 2022,0.0
+Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,Enterprise and Entrepreneurship,Foundation Undergraduate (1+2),Sep 2022,0.0
+Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,Management,Foundation Undergraduate (1+2),Sep 2022,10.0
+Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,School of Computing,Foundation Non Degree,Sep 2022,0.0
+Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,School of Computing,Foundation Undergraduate (1+2),Sep 2022,1.0
+Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,School of Law,Foundation Undergraduate (1+2),Sep 2022,19.0
+Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,School of Psychology,Foundation Undergraduate (1+2),Sep 2022,7.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Accounting and Finance,Postgraduate Research,Sep 2021,-1.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Accounting and Finance,Postgraduate Taught,Sep 2021,4.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Accounting and Finance,Undergraduate,Sep 2021,5.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Buckingham Enterprise and Innovation Unit,Postgraduate Taught,Sep 2021,-1.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Centre for Foundation Studies,Non Degree Leading to Postgraduate Taught,Sep 2021,0.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Economics and International Studies,Postgraduate Research,Sep 2021,7.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Economics and International Studies,Postgraduate Taught,Sep 2021,20.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Economics and International Studies,Undergraduate,Sep 2021,24.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Economics and International Studies,Occassional Non Degree,Sep 2021,-1.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Economics and International Studies,Visiting Students Non Degree,Sep 2021,-1.0
+Buckingham,Non Foundation (1+2) and Non Foundation,English and Digital Media,Postgraduate Research,Sep 2021,6.0
+Buckingham,Non Foundation (1+2) and Non Foundation,English and Digital Media,Undergraduate,Sep 2021,8.0
+Buckingham,Non Foundation (1+2) and Non Foundation,English and Digital Media,Visiting Students Non Degree,Sep 2021,-1.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Enterprise and Entrepreneurship,Postgraduate Taught,Sep 2021,0.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Enterprise and Entrepreneurship,Undergraduate,Sep 2021,4.0
+Buckingham,Non Foundation (1+2) and Non Foundation,History and History of Art,Postgraduate Research,Sep 2021,8.0
+Buckingham,Non Foundation (1+2) and Non Foundation,History and History of Art,Postgraduate Taught,Sep 2021,11.0
+Buckingham,Non Foundation (1+2) and Non Foundation,History and History of Art,Undergraduate,Sep 2021,2.0
+Buckingham,Non Foundation (1+2) and Non Foundation,London,Occassional Non Degree,Sep 2021,20.0
+Buckingham,Non Foundation (1+2) and Non Foundation,London,Postgraduate Research,Sep 2021,53.0
+Buckingham,Non Foundation (1+2) and Non Foundation,London,Postgraduate Taught,Sep 2021,0.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Management,Occassional Non Degree,Sep 2021,0.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Management,Postgraduate Research,Sep 2021,1.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Management,Postgraduate Taught,Sep 2021,7.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Management,Undergraduate,Sep 2021,14.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Management,Visiting Students Non Degree,Sep 2021,0.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Management,Executive Non Degree,Sep 2021,-1.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Modern Foreign Languages,Undergraduate,Sep 2021,1.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Modern Foreign Languages,Occassional Non Degree,Sep 2021,-1.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Computing,Non Degree Apprentice,Sep 2021,22.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Computing,Postgraduate Research,Sep 2021,0.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Computing,Postgraduate Taught,Sep 2021,1.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Computing,Undergraduate,Sep 2021,10.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Education,Occassional Non Degree,Sep 2021,24.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Education,Postgraduate Research,Sep 2021,6.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Education,Postgraduate Taught,Sep 2021,1138.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Law,Postgraduate Research,Sep 2021,1.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Law,Postgraduate Taught,Sep 2021,0.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Law,Undergraduate,Sep 2021,52.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Postgraduate Medicine,Postgraduate Research,Sep 2021,0.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Postgraduate Medicine,Postgraduate Taught,Sep 2021,32.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Psychology,Postgraduate Research,Sep 2021,5.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Psychology,Postgraduate Taught,Sep 2021,4.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Psychology,Undergraduate,Sep 2021,19.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of UG Medicine,Undergraduate,Sep 2021,-1.0
+Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,Accounting and Finance,Foundation Undergraduate (1+2),Sep 2021,3.0
+Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,Centre for Foundation Studies,Foundation Non Degree,Sep 2021,17.0
+Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,Economics and International Studies,Foundation Undergraduate (1+2),Sep 2021,6.0
+Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,English and Digital Media,Foundation Undergraduate (1+2),Sep 2021,2.0
+Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,Enterprise and Entrepreneurship,Foundation Undergraduate (1+2),Sep 2021,0.0
+Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,Management,Foundation Undergraduate (1+2),Sep 2021,9.0
+Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,School of Computing,Foundation Non Degree,Sep 2021,4.0
+Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,School of Computing,Foundation Undergraduate (1+2),Sep 2021,3.0
+Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,School of Law,Foundation Undergraduate (1+2),Sep 2021,13.0
+Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,School of Psychology,Foundation Undergraduate (1+2),Sep 2021,5.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Accounting and Finance,Postgraduate Research,Sep 2020,-1.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Accounting and Finance,Postgraduate Taught,Sep 2020,2.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Accounting and Finance,Undergraduate,Sep 2020,9.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Buckingham Enterprise and Innovation Unit,Postgraduate Taught,Sep 2020,-1.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Centre for Foundation Studies,Non Degree Leading to Postgraduate Taught,Sep 2020,2.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Economics and International Studies,Postgraduate Research,Sep 2020,3.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Economics and International Studies,Postgraduate Taught,Sep 2020,16.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Economics and International Studies,Undergraduate,Sep 2020,18.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Economics and International Studies,Occassional Non Degree,Sep 2020,-1.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Economics and International Studies,Visiting Students Non Degree,Sep 2020,-1.0
+Buckingham,Non Foundation (1+2) and Non Foundation,English and Digital Media,Postgraduate Research,Sep 2020,5.0
+Buckingham,Non Foundation (1+2) and Non Foundation,English and Digital Media,Undergraduate,Sep 2020,7.0
+Buckingham,Non Foundation (1+2) and Non Foundation,English and Digital Media,Visiting Students Non Degree,Sep 2020,-1.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Enterprise and Entrepreneurship,Postgraduate Taught,Sep 2020,0.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Enterprise and Entrepreneurship,Undergraduate,Sep 2020,5.0
+Buckingham,Non Foundation (1+2) and Non Foundation,History and History of Art,Postgraduate Research,Sep 2020,3.0
+Buckingham,Non Foundation (1+2) and Non Foundation,History and History of Art,Postgraduate Taught,Sep 2020,8.0
+Buckingham,Non Foundation (1+2) and Non Foundation,History and History of Art,Undergraduate,Sep 2020,2.0
+Buckingham,Non Foundation (1+2) and Non Foundation,London,Occassional Non Degree,Sep 2020,6.0
+Buckingham,Non Foundation (1+2) and Non Foundation,London,Postgraduate Research,Sep 2020,37.0
+Buckingham,Non Foundation (1+2) and Non Foundation,London,Postgraduate Taught,Sep 2020,4.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Management,Occassional Non Degree,Sep 2020,0.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Management,Postgraduate Research,Sep 2020,0.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Management,Postgraduate Taught,Sep 2020,11.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Management,Undergraduate,Sep 2020,23.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Management,Visiting Students Non Degree,Sep 2020,0.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Management,Executive Non Degree,Sep 2020,-1.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Modern Foreign Languages,Undergraduate,Sep 2020,2.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Modern Foreign Languages,Occassional Non Degree,Sep 2020,-1.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Computing,Non Degree Apprentice,Sep 2020,13.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Computing,Postgraduate Research,Sep 2020,1.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Computing,Postgraduate Taught,Sep 2020,3.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Computing,Undergraduate,Sep 2020,10.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Education,Occassional Non Degree,Sep 2020,20.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Education,Postgraduate Research,Sep 2020,8.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Education,Postgraduate Taught,Sep 2020,840.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Law,Postgraduate Research,Sep 2020,0.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Law,Postgraduate Taught,Sep 2020,4.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Law,Undergraduate,Sep 2020,54.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Postgraduate Medicine,Postgraduate Research,Sep 2020,1.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Postgraduate Medicine,Postgraduate Taught,Sep 2020,18.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Psychology,Postgraduate Research,Sep 2020,5.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Psychology,Postgraduate Taught,Sep 2020,5.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Psychology,Undergraduate,Sep 2020,46.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of UG Medicine,Undergraduate,Sep 2020,-1.0
+Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,Accounting and Finance,Foundation Undergraduate (1+2),Sep 2020,5.0
+Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,Centre for Foundation Studies,Foundation Non Degree,Sep 2020,19.0
+Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,Economics and International Studies,Foundation Undergraduate (1+2),Sep 2020,3.0
+Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,English and Digital Media,Foundation Undergraduate (1+2),Sep 2020,2.0
+Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,Enterprise and Entrepreneurship,Foundation Undergraduate (1+2),Sep 2020,-1.0
+Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,Management,Foundation Undergraduate (1+2),Sep 2020,15.0
+Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,School of Computing,Foundation Non Degree,Sep 2020,1.0
+Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,School of Computing,Foundation Undergraduate (1+2),Sep 2020,7.0
+Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,School of Law,Foundation Undergraduate (1+2),Sep 2020,8.0
+Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,School of Psychology,Foundation Undergraduate (1+2),Sep 2020,8.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Accounting and Finance,Postgraduate Research,Sep 2019,-1.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Accounting and Finance,Postgraduate Taught,Sep 2019,4.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Accounting and Finance,Undergraduate,Sep 2019,13.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Buckingham Enterprise and Innovation Unit,Postgraduate Taught,Sep 2019,-1.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Centre for Foundation Studies,Non Degree Leading to Postgraduate Taught,Sep 2019,0.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Economics and International Studies,Postgraduate Research,Sep 2019,2.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Economics and International Studies,Postgraduate Taught,Sep 2019,13.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Economics and International Studies,Undergraduate,Sep 2019,44.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Economics and International Studies,Occassional Non Degree,Sep 2019,-1.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Economics and International Studies,Visiting Students Non Degree,Sep 2019,-1.0
+Buckingham,Non Foundation (1+2) and Non Foundation,English and Digital Media,Postgraduate Research,Sep 2019,4.0
+Buckingham,Non Foundation (1+2) and Non Foundation,English and Digital Media,Undergraduate,Sep 2019,15.0
+Buckingham,Non Foundation (1+2) and Non Foundation,English and Digital Media,Visiting Students Non Degree,Sep 2019,-1.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Enterprise and Entrepreneurship,Postgraduate Taught,Sep 2019,0.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Enterprise and Entrepreneurship,Undergraduate,Sep 2019,6.0
+Buckingham,Non Foundation (1+2) and Non Foundation,History and History of Art,Postgraduate Research,Sep 2019,5.0
+Buckingham,Non Foundation (1+2) and Non Foundation,History and History of Art,Postgraduate Taught,Sep 2019,8.0
+Buckingham,Non Foundation (1+2) and Non Foundation,History and History of Art,Undergraduate,Sep 2019,10.0
+Buckingham,Non Foundation (1+2) and Non Foundation,London,Occassional Non Degree,Sep 2019,13.0
+Buckingham,Non Foundation (1+2) and Non Foundation,London,Postgraduate Research,Sep 2019,52.0
+Buckingham,Non Foundation (1+2) and Non Foundation,London,Postgraduate Taught,Sep 2019,14.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Management,Occassional Non Degree,Sep 2019,26.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Management,Postgraduate Research,Sep 2019,0.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Management,Postgraduate Taught,Sep 2019,13.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Management,Undergraduate,Sep 2019,37.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Management,Visiting Students Non Degree,Sep 2019,0.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Management,Executive Non Degree,Sep 2019,-1.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Modern Foreign Languages,Undergraduate,Sep 2019,0.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Modern Foreign Languages,Occassional Non Degree,Sep 2019,-1.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Computing,Non Degree Apprentice,Sep 2019,47.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Computing,Postgraduate Research,Sep 2019,3.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Computing,Postgraduate Taught,Sep 2019,0.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Computing,Undergraduate,Sep 2019,18.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Education,Occassional Non Degree,Sep 2019,25.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Education,Postgraduate Research,Sep 2019,9.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Education,Postgraduate Taught,Sep 2019,789.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Law,Postgraduate Research,Sep 2019,3.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Law,Postgraduate Taught,Sep 2019,2.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Law,Undergraduate,Sep 2019,59.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Postgraduate Medicine,Postgraduate Research,Sep 2019,0.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Postgraduate Medicine,Postgraduate Taught,Sep 2019,1.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Psychology,Postgraduate Research,Sep 2019,2.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Psychology,Postgraduate Taught,Sep 2019,3.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Psychology,Undergraduate,Sep 2019,40.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of UG Medicine,Undergraduate,Sep 2019,-1.0
+Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,Accounting and Finance,Foundation Undergraduate (1+2),Sep 2019,6.0
+Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,Centre for Foundation Studies,Foundation Non Degree,Sep 2019,14.0
+Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,Economics and International Studies,Foundation Undergraduate (1+2),Sep 2019,5.0
+Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,English and Digital Media,Foundation Undergraduate (1+2),Sep 2019,0.0
+Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,Enterprise and Entrepreneurship,Foundation Undergraduate (1+2),Sep 2019,-1.0
+Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,Management,Foundation Undergraduate (1+2),Sep 2019,9.0
+Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,School of Computing,Foundation Non Degree,Sep 2019,2.0
+Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,School of Computing,Foundation Undergraduate (1+2),Sep 2019,2.0
+Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,School of Law,Foundation Undergraduate (1+2),Sep 2019,15.0
+Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,School of Psychology,Foundation Undergraduate (1+2),Sep 2019,1.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Accounting and Finance,Postgraduate Research,Jan 2022,-1.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Accounting and Finance,Postgraduate Taught,Jan 2022,9.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Accounting and Finance,Undergraduate,Jan 2022,2.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Buckingham Enterprise and Innovation Unit,Postgraduate Taught,Jan 2022,0.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Centre for Foundation Studies,Non Degree Leading to Postgraduate Taught,Jan 2022,-1.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Economics and International Studies,Postgraduate Research,Jan 2022,4.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Economics and International Studies,Postgraduate Taught,Jan 2022,18.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Economics and International Studies,Undergraduate,Jan 2022,13.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Economics and International Studies,Occassional Non Degree,Jan 2022,0.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Economics and International Studies,Visiting Students Non Degree,Jan 2022,1.0
+Buckingham,Non Foundation (1+2) and Non Foundation,English and Digital Media,Postgraduate Research,Jan 2022,6.0
+Buckingham,Non Foundation (1+2) and Non Foundation,English and Digital Media,Undergraduate,Jan 2022,6.0
+Buckingham,Non Foundation (1+2) and Non Foundation,English and Digital Media,Visiting Students Non Degree,Jan 2022,0.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Enterprise and Entrepreneurship,Postgraduate Taught,Jan 2022,0.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Enterprise and Entrepreneurship,Undergraduate,Jan 2022,1.0
+Buckingham,Non Foundation (1+2) and Non Foundation,History and History of Art,Postgraduate Research,Jan 2022,5.0
+Buckingham,Non Foundation (1+2) and Non Foundation,History and History of Art,Postgraduate Taught,Jan 2022,1.0
+Buckingham,Non Foundation (1+2) and Non Foundation,History and History of Art,Undergraduate,Jan 2022,0.0
+Buckingham,Non Foundation (1+2) and Non Foundation,London,Occassional Non Degree,Jan 2022,1.0
+Buckingham,Non Foundation (1+2) and Non Foundation,London,Postgraduate Research,Jan 2022,5.0
+Buckingham,Non Foundation (1+2) and Non Foundation,London,Postgraduate Taught,Jan 2022,9.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Management,Occassional Non Degree,Jan 2022,0.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Management,Postgraduate Research,Jan 2022,0.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Management,Postgraduate Taught,Jan 2022,21.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Management,Undergraduate,Jan 2022,6.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Management,Visiting Students Non Degree,Jan 2022,-1.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Management,Executive Non Degree,Jan 2022,0.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Modern Foreign Languages,Undergraduate,Jan 2022,0.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Modern Foreign Languages,Occassional Non Degree,Jan 2022,1.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Computing,Non Degree Apprentice,Jan 2022,-1.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Computing,Postgraduate Research,Jan 2022,2.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Computing,Postgraduate Taught,Jan 2022,37.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Computing,Undergraduate,Jan 2022,9.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Education,Occassional Non Degree,Jan 2022,8.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Education,Postgraduate Research,Jan 2022,9.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Education,Postgraduate Taught,Jan 2022,30.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Law,Postgraduate Research,Jan 2022,1.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Law,Postgraduate Taught,Jan 2022,12.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Law,Undergraduate,Jan 2022,22.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Postgraduate Medicine,Postgraduate Research,Jan 2022,1.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Postgraduate Medicine,Postgraduate Taught,Jan 2022,25.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Psychology,Postgraduate Research,Jan 2022,3.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Psychology,Postgraduate Taught,Jan 2022,6.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Psychology,Undergraduate,Jan 2022,12.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of UG Medicine,Undergraduate,Jan 2022,132.0
+Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,Accounting and Finance,Foundation Undergraduate (1+2),Jan 2022,1.0
+Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,Centre for Foundation Studies,Foundation Non Degree,Jan 2022,14.0
+Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,Economics and International Studies,Foundation Undergraduate (1+2),Jan 2022,1.0
+Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,English and Digital Media,Foundation Undergraduate (1+2),Jan 2022,3.0
+Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,Enterprise and Entrepreneurship,Foundation Undergraduate (1+2),Jan 2022,0.0
+Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,Management,Foundation Undergraduate (1+2),Jan 2022,6.0
+Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,School of Computing,Foundation Non Degree,Jan 2022,-1.0
+Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,School of Computing,Foundation Undergraduate (1+2),Jan 2022,7.0
+Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,School of Law,Foundation Undergraduate (1+2),Jan 2022,8.0
+Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,School of Psychology,Foundation Undergraduate (1+2),Jan 2022,3.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Accounting and Finance,Postgraduate Research,Jan 2021,-1.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Accounting and Finance,Postgraduate Taught,Jan 2021,7.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Accounting and Finance,Undergraduate,Jan 2021,5.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Buckingham Enterprise and Innovation Unit,Postgraduate Taught,Jan 2021,7.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Centre for Foundation Studies,Non Degree Leading to Postgraduate Taught,Jan 2021,-1.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Economics and International Studies,Postgraduate Research,Jan 2021,8.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Economics and International Studies,Postgraduate Taught,Jan 2021,41.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Economics and International Studies,Undergraduate,Jan 2021,18.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Economics and International Studies,Occassional Non Degree,Jan 2021,1.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Economics and International Studies,Visiting Students Non Degree,Jan 2021,0.0
+Buckingham,Non Foundation (1+2) and Non Foundation,English and Digital Media,Postgraduate Research,Jan 2021,5.0
+Buckingham,Non Foundation (1+2) and Non Foundation,English and Digital Media,Undergraduate,Jan 2021,7.0
+Buckingham,Non Foundation (1+2) and Non Foundation,English and Digital Media,Visiting Students Non Degree,Jan 2021,0.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Enterprise and Entrepreneurship,Postgraduate Taught,Jan 2021,0.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Enterprise and Entrepreneurship,Undergraduate,Jan 2021,2.0
+Buckingham,Non Foundation (1+2) and Non Foundation,History and History of Art,Postgraduate Research,Jan 2021,2.0
+Buckingham,Non Foundation (1+2) and Non Foundation,History and History of Art,Postgraduate Taught,Jan 2021,3.0
+Buckingham,Non Foundation (1+2) and Non Foundation,History and History of Art,Undergraduate,Jan 2021,3.0
+Buckingham,Non Foundation (1+2) and Non Foundation,London,Occassional Non Degree,Jan 2021,5.0
+Buckingham,Non Foundation (1+2) and Non Foundation,London,Postgraduate Research,Jan 2021,5.0
+Buckingham,Non Foundation (1+2) and Non Foundation,London,Postgraduate Taught,Jan 2021,17.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Management,Occassional Non Degree,Jan 2021,0.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Management,Postgraduate Research,Jan 2021,1.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Management,Postgraduate Taught,Jan 2021,25.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Management,Undergraduate,Jan 2021,10.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Management,Visiting Students Non Degree,Jan 2021,-1.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Management,Executive Non Degree,Jan 2021,0.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Modern Foreign Languages,Undergraduate,Jan 2021,1.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Modern Foreign Languages,Occassional Non Degree,Jan 2021,0.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Computing,Non Degree Apprentice,Jan 2021,-1.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Computing,Postgraduate Research,Jan 2021,2.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Computing,Postgraduate Taught,Jan 2021,18.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Computing,Undergraduate,Jan 2021,13.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Education,Occassional Non Degree,Jan 2021,1.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Education,Postgraduate Research,Jan 2021,3.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Education,Postgraduate Taught,Jan 2021,80.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Law,Postgraduate Research,Jan 2021,1.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Law,Postgraduate Taught,Jan 2021,15.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Law,Undergraduate,Jan 2021,29.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Postgraduate Medicine,Postgraduate Research,Jan 2021,0.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Postgraduate Medicine,Postgraduate Taught,Jan 2021,29.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Psychology,Postgraduate Research,Jan 2021,7.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Psychology,Postgraduate Taught,Jan 2021,11.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Psychology,Undergraduate,Jan 2021,19.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of UG Medicine,Undergraduate,Jan 2021,127.0
+Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,Accounting and Finance,Foundation Undergraduate (1+2),Jan 2021,2.0
+Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,Centre for Foundation Studies,Foundation Non Degree,Jan 2021,8.0
+Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,Economics and International Studies,Foundation Undergraduate (1+2),Jan 2021,3.0
+Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,English and Digital Media,Foundation Undergraduate (1+2),Jan 2021,1.0
+Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,Enterprise and Entrepreneurship,Foundation Undergraduate (1+2),Jan 2021,-1.0
+Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,Management,Foundation Undergraduate (1+2),Jan 2021,17.0
+Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,School of Computing,Foundation Non Degree,Jan 2021,-1.0
+Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,School of Computing,Foundation Undergraduate (1+2),Jan 2021,2.0
+Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,School of Law,Foundation Undergraduate (1+2),Jan 2021,10.0
+Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,School of Psychology,Foundation Undergraduate (1+2),Jan 2021,4.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Accounting and Finance,Postgraduate Research,Jan 2020,-1.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Accounting and Finance,Postgraduate Taught,Jan 2020,9.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Accounting and Finance,Undergraduate,Jan 2020,5.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Buckingham Enterprise and Innovation Unit,Postgraduate Taught,Jan 2020,0.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Centre for Foundation Studies,Non Degree Leading to Postgraduate Taught,Jan 2020,-1.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Economics and International Studies,Postgraduate Research,Jan 2020,2.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Economics and International Studies,Postgraduate Taught,Jan 2020,24.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Economics and International Studies,Undergraduate,Jan 2020,15.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Economics and International Studies,Occassional Non Degree,Jan 2020,0.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Economics and International Studies,Visiting Students Non Degree,Jan 2020,1.0
+Buckingham,Non Foundation (1+2) and Non Foundation,English and Digital Media,Postgraduate Research,Jan 2020,6.0
+Buckingham,Non Foundation (1+2) and Non Foundation,English and Digital Media,Undergraduate,Jan 2020,12.0
+Buckingham,Non Foundation (1+2) and Non Foundation,English and Digital Media,Visiting Students Non Degree,Jan 2020,14.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Enterprise and Entrepreneurship,Postgraduate Taught,Jan 2020,0.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Enterprise and Entrepreneurship,Undergraduate,Jan 2020,3.0
+Buckingham,Non Foundation (1+2) and Non Foundation,History and History of Art,Postgraduate Research,Jan 2020,2.0
+Buckingham,Non Foundation (1+2) and Non Foundation,History and History of Art,Postgraduate Taught,Jan 2020,2.0
+Buckingham,Non Foundation (1+2) and Non Foundation,History and History of Art,Undergraduate,Jan 2020,4.0
+Buckingham,Non Foundation (1+2) and Non Foundation,London,Occassional Non Degree,Jan 2020,0.0
+Buckingham,Non Foundation (1+2) and Non Foundation,London,Postgraduate Research,Jan 2020,1.0
+Buckingham,Non Foundation (1+2) and Non Foundation,London,Postgraduate Taught,Jan 2020,0.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Management,Occassional Non Degree,Jan 2020,-1.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Management,Postgraduate Research,Jan 2020,6.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Management,Postgraduate Taught,Jan 2020,15.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Management,Undergraduate,Jan 2020,16.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Management,Visiting Students Non Degree,Jan 2020,-1.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Management,Executive Non Degree,Jan 2020,0.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Modern Foreign Languages,Undergraduate,Jan 2020,3.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Modern Foreign Languages,Occassional Non Degree,Jan 2020,-1.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Computing,Non Degree Apprentice,Jan 2020,-1.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Computing,Postgraduate Research,Jan 2020,2.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Computing,Postgraduate Taught,Jan 2020,19.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Computing,Undergraduate,Jan 2020,8.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Education,Occassional Non Degree,Jan 2020,2.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Education,Postgraduate Research,Jan 2020,0.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Education,Postgraduate Taught,Jan 2020,0.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Law,Postgraduate Research,Jan 2020,0.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Law,Postgraduate Taught,Jan 2020,14.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Law,Undergraduate,Jan 2020,38.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Postgraduate Medicine,Postgraduate Research,Jan 2020,0.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Postgraduate Medicine,Postgraduate Taught,Jan 2020,11.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Psychology,Postgraduate Research,Jan 2020,5.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Psychology,Postgraduate Taught,Jan 2020,6.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Psychology,Undergraduate,Jan 2020,17.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of UG Medicine,Undergraduate,Jan 2020,131.0
+Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,Accounting and Finance,Foundation Undergraduate (1+2),Jan 2020,1.0
+Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,Centre for Foundation Studies,Foundation Non Degree,Jan 2020,10.0
+Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,Economics and International Studies,Foundation Undergraduate (1+2),Jan 2020,6.0
+Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,English and Digital Media,Foundation Undergraduate (1+2),Jan 2020,0.0
+Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,Enterprise and Entrepreneurship,Foundation Undergraduate (1+2),Jan 2020,-1.0
+Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,Management,Foundation Undergraduate (1+2),Jan 2020,9.0
+Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,School of Computing,Foundation Non Degree,Jan 2020,-1.0
+Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,School of Computing,Foundation Undergraduate (1+2),Jan 2020,3.0
+Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,School of Law,Foundation Undergraduate (1+2),Jan 2020,5.0
+Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,School of Psychology,Foundation Undergraduate (1+2),Jan 2020,3.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Accounting and Finance,Postgraduate Research,Jan 2019,-1.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Accounting and Finance,Postgraduate Taught,Jan 2019,3.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Accounting and Finance,Undergraduate,Jan 2019,9.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Buckingham Enterprise and Innovation Unit,Postgraduate Taught,Jan 2019,-1.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Centre for Foundation Studies,Non Degree Leading to Postgraduate Taught,Jan 2019,-1.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Economics and International Studies,Postgraduate Research,Jan 2019,1.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Economics and International Studies,Postgraduate Taught,Jan 2019,18.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Economics and International Studies,Undergraduate,Jan 2019,28.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Economics and International Studies,Occassional Non Degree,Jan 2019,0.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Economics and International Studies,Visiting Students Non Degree,Jan 2019,0.0
+Buckingham,Non Foundation (1+2) and Non Foundation,English and Digital Media,Postgraduate Research,Jan 2019,5.0
+Buckingham,Non Foundation (1+2) and Non Foundation,English and Digital Media,Undergraduate,Jan 2019,12.0
+Buckingham,Non Foundation (1+2) and Non Foundation,English and Digital Media,Visiting Students Non Degree,Jan 2019,0.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Enterprise and Entrepreneurship,Postgraduate Taught,Jan 2019,0.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Enterprise and Entrepreneurship,Undergraduate,Jan 2019,10.0
+Buckingham,Non Foundation (1+2) and Non Foundation,History and History of Art,Postgraduate Research,Jan 2019,0.0
+Buckingham,Non Foundation (1+2) and Non Foundation,History and History of Art,Postgraduate Taught,Jan 2019,2.0
+Buckingham,Non Foundation (1+2) and Non Foundation,History and History of Art,Undergraduate,Jan 2019,1.0
+Buckingham,Non Foundation (1+2) and Non Foundation,London,Occassional Non Degree,Jan 2019,2.0
+Buckingham,Non Foundation (1+2) and Non Foundation,London,Postgraduate Research,Jan 2019,3.0
+Buckingham,Non Foundation (1+2) and Non Foundation,London,Postgraduate Taught,Jan 2019,-1.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Management,Occassional Non Degree,Jan 2019,-1.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Management,Postgraduate Research,Jan 2019,2.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Management,Postgraduate Taught,Jan 2019,32.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Management,Undergraduate,Jan 2019,20.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Management,Visiting Students Non Degree,Jan 2019,-1.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Management,Executive Non Degree,Jan 2019,4.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Modern Foreign Languages,Undergraduate,Jan 2019,0.0
+Buckingham,Non Foundation (1+2) and Non Foundation,Modern Foreign Languages,Occassional Non Degree,Jan 2019,-1.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Computing,Non Degree Apprentice,Jan 2019,-1.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Computing,Postgraduate Research,Jan 2019,2.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Computing,Postgraduate Taught,Jan 2019,2.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Computing,Undergraduate,Jan 2019,6.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Education,Occassional Non Degree,Jan 2019,7.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Education,Postgraduate Research,Jan 2019,0.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Education,Postgraduate Taught,Jan 2019,0.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Law,Postgraduate Research,Jan 2019,3.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Law,Postgraduate Taught,Jan 2019,20.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Law,Undergraduate,Jan 2019,29.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Postgraduate Medicine,Postgraduate Research,Jan 2019,1.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Postgraduate Medicine,Postgraduate Taught,Jan 2019,0.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Psychology,Postgraduate Research,Jan 2019,2.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Psychology,Postgraduate Taught,Jan 2019,6.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of Psychology,Undergraduate,Jan 2019,25.0
+Buckingham,Non Foundation (1+2) and Non Foundation,School of UG Medicine,Undergraduate,Jan 2019,92.0
+Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,Accounting and Finance,Foundation Undergraduate (1+2),Jan 2019,0.0
+Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,Centre for Foundation Studies,Foundation Non Degree,Jan 2019,18.0
+Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,Economics and International Studies,Foundation Undergraduate (1+2),Jan 2019,1.0
+Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,English and Digital Media,Foundation Undergraduate (1+2),Jan 2019,0.0
+Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,Enterprise and Entrepreneurship,Foundation Undergraduate (1+2),Jan 2019,-1.0
+Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,Management,Foundation Undergraduate (1+2),Jan 2019,8.0
+Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,School of Computing,Foundation Non Degree,Jan 2019,-1.0
+Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,School of Computing,Foundation Undergraduate (1+2),Jan 2019,1.0
+Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,School of Law,Foundation Undergraduate (1+2),Jan 2019,3.0
+Buckingham,Foundation Undergraduate (1+2) and Foundation Non Degree,School of Psychology,Foundation Undergraduate (1+2),Jan 2019,0.0
