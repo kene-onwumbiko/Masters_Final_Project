@@ -81,7 +81,7 @@ new_sep_2017_2020_acceptances = sep_2017_2020_acceptances.melt(id_vars = id_vars
                                                                var_name = "Category", 
                                                                value_name = "Number of Acceptances")
 
-# Apply the function to the September 2017-2020 acceptances dataset
+# Apply the get_date_sep_2017_2020 function to the September 2017-2020 acceptances dataset
 new_sep_2017_2020_acceptances = new_sep_2017_2020_acceptances.apply(get_date_sep_2017_2020, axis = 1)
 
 # Merge the applications and acceptance datasets
@@ -158,7 +158,7 @@ new_sep_2020_2023_acceptances = sep_2020_2023_acceptances.melt(id_vars = id_vars
                                                                var_name = "Category", 
                                                                value_name = "Number of Acceptances")
 
-# Apply the function to the September 2020-2023 acceptances dataset
+# Apply the get_date_sep_2020_2023 function to the September 2020-2023 acceptances dataset
 new_sep_2020_2023_acceptances = new_sep_2020_2023_acceptances.apply(get_date_sep_2020_2023, axis = 1)
 
 # Merge the applications and acceptance datasets
@@ -234,7 +234,7 @@ new_jan_2017_2020_acceptances = jan_2017_2020_acceptances.melt(id_vars = id_vars
                                                                var_name = "Category", 
                                                                value_name = "Number of Acceptances")
 
-# Apply the function to the January 2017-2020 acceptances dataset
+# Apply the get_date_jan_2017_2020 function to the January 2017-2020 acceptances dataset
 new_jan_2017_2020_acceptances = new_jan_2017_2020_acceptances.apply(get_date_jan_2017_2020, axis = 1)
 
 # Merge the applications and acceptance datasets
@@ -316,7 +316,7 @@ new_jan_2020_2023_acceptances = jan_2020_2023_acceptances.melt(id_vars = id_vars
                                                                var_name = "Category", 
                                                                value_name = "Number of Acceptances")
 
-# Apply the function to the January 2020-2023 acceptances dataset
+# Apply the get_date_jan_2020_2023 function to the January 2020-2023 acceptances dataset
 new_jan_2020_2023_acceptances = new_jan_2020_2023_acceptances.apply(get_date_jan_2020_2023, axis = 1)
 
 # Merge the applications and acceptance datasets
@@ -351,6 +351,24 @@ final_records = sep_2017_2023.merge(jan_2017_2023, on = on_values_3, how = "oute
 
 # Split the Date column into Month and Year columns
 final_records[["Month", "Year"]] = final_records["Date"].str.split(" ", expand = True)
+
+# Create a function to modify a new column "Main Level" based on the values in "Level" column
+def get_main_level(row):
+    level = row["Level"]
+    if "Foundation" in level:
+        row["Main Level"] = "Foundation"
+    elif "Apprentice" in level:
+        row["Main Level"] = "Apprenticeship"
+    elif "Non Degree" in level:
+        row["Main Level"] = "Non Degree"
+    elif "Undergraduate" in level:
+        row["Main Level"] = "Undergraduate Degree"
+    elif "Postgraduate" in level:
+        row["Main Level"] = "Postgraduate Degree"
+    return row
+
+# Apply the function to the final_records dataset
+final_records = final_records.apply(get_main_level, axis = 1)
 
 # Save to a CSV file
 final_records.to_csv(r'final_records.csv', index = False)
@@ -464,6 +482,9 @@ final_registrations = final_registrations.fillna(0)
 
 # Split the Date column into Month and Year columns
 final_registrations[["Month", "Year"]] = final_registrations["Date"].str.split(" ", expand = True)
+
+# Apply the get_main_level function to the final_registration dataset
+final_registrations = final_registrations.apply(get_main_level, axis = 1)
 
 # Save to a CSV file
 final_registrations.to_csv(r'final_registrations.csv', index = False)
