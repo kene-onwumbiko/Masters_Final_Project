@@ -352,6 +352,10 @@ final_records = sep_2017_2023.merge(jan_2017_2023, on = on_values_3, how = "oute
 # Split the Date column into Month and Year columns
 final_records[["Month", "Year"]] = final_records["Date"].str.split(" ", expand = True)
 
+# Replace "School of Postgraduate Medicine" with "School of PG Medicine" in the School / Department column
+final_records["School / Department"] = final_records["School / Department"].replace("School of Postgraduate Medicine", 
+                                                                                    "School of PG Medicine")
+
 # Create a function to modify a new column "Main Level" based on the values in "Level" column
 def get_main_level(row):
     level = row["Level"]
@@ -482,6 +486,10 @@ final_registrations = final_registrations.fillna(0)
 
 # Split the Date column into Month and Year columns
 final_registrations[["Month", "Year"]] = final_registrations["Date"].str.split(" ", expand = True)
+
+# Replace "School of Postgraduate Medicine" with "School of PG Medicine" in the School / Department column
+final_registrations["School / Department"] = final_registrations["School / Department"].replace("School of Postgraduate Medicine", 
+                                                                                                "School of PG Medicine")
 
 # Apply the get_main_level function to the final_registration dataset
 final_registrations = final_registrations.apply(get_main_level, axis = 1)
