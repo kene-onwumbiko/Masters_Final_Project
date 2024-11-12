@@ -465,7 +465,7 @@ final_registrations = final_registrations.melt(id_vars = id_vars, value_vars = v
                                                                   var_name = "Date", 
                                                                   value_name = "Number of Registrations")
 
-# Fill the missing values with -1
+# Fill the missing values with 0
 final_registrations = final_registrations.fillna(0)
 
 # Split the Date column into Month and Year columns
