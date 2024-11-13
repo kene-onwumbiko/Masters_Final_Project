@@ -485,6 +485,43 @@ final_registrations.to_csv(r'final_registrations.csv', index = False)
 
 
 
+########## FIX THE NUMBER OF REGISTRATIONS VALUES ##########
+# Drop rows with the specified dates in the final_records dataset
+dates_to_drop = ["Sep 2023", "Sep 2018", "Sep 2017", "Jan 2023", "Jan 2018", "Jan 2017"]
+new_final_records = final_records[~final_records["Date"].isin(dates_to_drop)]
+
+# Drop the Category column
+new_final_records = new_final_records.drop(columns = "Category")
+
+# Group by Campus, Group, School / Department, Level and Date
+# Then sum the values for Number of Acceptances and Number of Applications
+# And sort the values according to Group and Date in descending order
+new_final_records = new_final_records.groupby(["Campus", "Group", "School / Department", "Level", "Date"], 
+                                              as_index = False)[["Number of Applications", 
+                                                "Number of Acceptances"]].sum().sort_values(by = ["Group", "Date"], 
+                                                ascending = False)
+
+# Merge the data with the final_registrations dataset 
+new_final_records = new_final_records.merge(final_registrations, on = ["Campus", "Group", 
+                                          "School / Department", "Level", "Date"], how = "left")
+
+# Create a function to adjust the Number of Registrations based on the Number of Acceptances
+def adjust_registrations(row):
+    if row["Number of Registrations"] > row["Number of Acceptances"]:
+        row["Number of Registrations"] = row["Number of Acceptances"]
+    return row
+
+# Apply the function to the new_final_records dataset
+new_final_records = new_final_records.apply(adjust_registrations, axis = 1)
+
+# Save to a CSV file
+new_final_records.to_csv(r'new_final_records.csv', index = False)
+
+
+
+
+
+
 
 
 
