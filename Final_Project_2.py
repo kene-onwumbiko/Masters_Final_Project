@@ -34,11 +34,14 @@ final_summary = final_records.groupby(
 on_values = ["Campus", "Group", "School / Department", "Level", "Date"]                                                                         
 final_summary = final_summary.merge(final_registrations, on = on_values, how = "left")
 
-index_values = ["Campus", "Group", "School / Department", "Level"]  
-data = final_summary.pivot(index = index_values, 
-                           columns = "Date", values = ["Number of Acceptances", "Number of Registrations"])
+# index_values = ["Campus", "Group", "School / Department", "Level"]  
+# data = final_summary.pivot(index = index_values, 
+#                            columns = "Date", values = ["Number of Acceptances", "Number of Registrations"])
 
-
+# Group by "School / Department" and calculate the total for "Number of Acceptances" and "Number of Registrations"
+total_summary = final_summary.groupby("School / Department", as_index=False)[
+    ["Number of Acceptances", "Number of Registrations"]
+].sum()
 
 
 
