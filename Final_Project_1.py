@@ -7,8 +7,9 @@ Created on Sun May 26 14:55:26 2024
 
 # Import libraries
 import pandas as pd
+import numpy as np
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import confusion_matrix, accuracy_score, recall_score, precision_score, f1_score
+from sklearn.metrics import mean_squared_error, r2_score
 
 
 
@@ -554,6 +555,23 @@ train_new_final_records.to_csv(r'train_new_final_records.csv', index = False)
 test_department_records = test_new_final_records.groupby("School / Department", 
                                                     as_index = False)[["Number of Acceptances", 
                                                                        "Number of Registrations"]].sum()
+
+# Create a list to store the actual Number of Acceptances from the test dataset
+actual_acceptances = test_department_records["Number of Acceptances"].tolist()                                                                       
+                                                                       
+# Create a list to store the predictions from the model 
+predicted_acceptances = [68,7,42,274,68,11,59,92,233,4,201,2228,323,105,180,347]
+
+# Calculate Root Mean Squared Error
+rmse = np.sqrt(mean_squared_error(actual_acceptances, predicted_acceptances))
+
+# Calculate R2 score
+r2 = r2_score(actual_acceptances, predicted_acceptances)
+
+# Print the Root Mean Squared Error and R2 score
+print(f"Root Mean Squared Error: {rmse}")
+print(f"R2 Score: {r2}")
+
 
 
 
