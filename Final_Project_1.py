@@ -7,6 +7,8 @@ Created on Sun May 26 14:55:26 2024
 
 # Import libraries
 import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import confusion_matrix, accuracy_score, recall_score, precision_score, f1_score
 
 
 
@@ -517,6 +519,37 @@ new_final_records = new_final_records.apply(adjust_registrations, axis = 1)
 # Save to a CSV file
 new_final_records.to_csv(r'new_final_records.csv', index = False)
 
+
+
+
+
+########## TRAINING AND TESTING DATA ##########
+# Create a unique key that combines "School / Department" and "Date"
+new_final_records['SchoolDateKey'] = new_final_records['School / Department'] + "_" + new_final_records['Date']
+
+# Get a unique list of 'SchoolDateKey'
+unique_keys = new_final_records['SchoolDateKey'].unique()
+
+# Split unique keys into training and testing sets (80% train, 20% test)
+train_keys, test_keys = train_test_split(unique_keys, test_size=0.2, random_state=42)
+
+# Filter the dataset to create training and testing datasets based on the keys
+train_data = new_final_records[new_final_records['SchoolDateKey'].isin(train_keys)]
+test_data = new_final_records[new_final_records['SchoolDateKey'].isin(test_keys)]
+
+# Drop the 'SchoolDateKey' column since it was only used for splitting
+train_data = train_data.drop(columns=['SchoolDateKey'])
+test_data = test_data.drop(columns=['SchoolDateKey'])
+
+
+
+
+
+########## MODEL EVALUATION ##########
+# Group by School / Department and calculate their sum of Number of Acceptances and Number of Registrations
+department_records = new_final_records.groupby("School / Department", 
+                                               as_index = False)[["Number of Acceptances", 
+                                                                  "Number of Registrations"]].sum()
 
 
 
