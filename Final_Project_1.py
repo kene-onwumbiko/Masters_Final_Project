@@ -524,22 +524,25 @@ new_final_records.to_csv(r'new_final_records.csv', index = False)
 
 
 ########## TRAINING AND TESTING DATA ##########
-# Create a unique key that combines "School / Department" and "Date"
-new_final_records['SchoolDateKey'] = new_final_records['School / Department'] + "_" + new_final_records['Date']
+# Create a column that combines School / Department and Date
+new_final_records["Department_Date"] = new_final_records["School / Department"] + "_" + new_final_records["Date"]
 
-# Get a unique list of 'SchoolDateKey'
-unique_keys = new_final_records['SchoolDateKey'].unique()
+# Get the unique values of Department_Date
+department_date_values = new_final_records["Department_Date"].unique()
 
-# Split unique keys into training and testing sets (80% train, 20% test)
-train_keys, test_keys = train_test_split(unique_keys, test_size=0.2, random_state=42)
+# Split the unique values for training and testing
+train_values, test_values = train_test_split(department_date_values, test_size = 0.4, random_state = 0)
 
-# Filter the dataset to create training and testing datasets based on the keys
-train_data = new_final_records[new_final_records['SchoolDateKey'].isin(train_keys)]
-test_data = new_final_records[new_final_records['SchoolDateKey'].isin(test_keys)]
+# Filter the new_final_records to create training and testing datasets based on the unique values
+train_new_final_records = new_final_records[new_final_records["Department_Date"].isin(train_values)]
+test_new_final_records = new_final_records[new_final_records['Department_Date'].isin(test_values)]
 
-# Drop the 'SchoolDateKey' column since it was only used for splitting
-train_data = train_data.drop(columns=['SchoolDateKey'])
-test_data = test_data.drop(columns=['SchoolDateKey'])
+# Drop the Department_Date column since it was only used for splitting
+train_new_final_records = train_new_final_records.drop(columns = ["Department_Date"])
+test_new_final_records = test_new_final_records.drop(columns = ["Department_Date"])
+
+# Save the training data to a CSV file
+train_new_final_records.to_csv(r'train_new_final_records.csv', index = False)
 
 
 
