@@ -531,11 +531,11 @@ new_final_records["Department_Date"] = new_final_records["School / Department"] 
 department_date_values = new_final_records["Department_Date"].unique()
 
 # Split the unique values for training and testing
-train_values, test_values = train_test_split(department_date_values, test_size = 0.4, random_state = 0)
+train_values, test_values = train_test_split(department_date_values, test_size = 0.5, random_state = 42)
 
 # Filter the new_final_records to create training and testing datasets based on the unique values
 train_new_final_records = new_final_records[new_final_records["Department_Date"].isin(train_values)]
-test_new_final_records = new_final_records[new_final_records['Department_Date'].isin(test_values)]
+test_new_final_records = new_final_records[new_final_records["Department_Date"].isin(test_values)]
 
 # Drop the Department_Date column since it was only used for splitting
 train_new_final_records = train_new_final_records.drop(columns = ["Department_Date"])
@@ -549,10 +549,11 @@ train_new_final_records.to_csv(r'train_new_final_records.csv', index = False)
 
 
 ########## MODEL EVALUATION ##########
-# Group by School / Department and calculate their sum of Number of Acceptances and Number of Registrations
-department_records = new_final_records.groupby("School / Department", 
-                                               as_index = False)[["Number of Acceptances", 
-                                                                  "Number of Registrations"]].sum()
+# Group the test dataset by School / Department and calculate their sum of Number of Acceptances 
+# and Number of Registrations
+test_department_records = test_new_final_records.groupby("School / Department", 
+                                                    as_index = False)[["Number of Acceptances", 
+                                                                       "Number of Registrations"]].sum()
 
 
 
