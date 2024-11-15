@@ -560,7 +560,7 @@ test_department_records = test_new_final_records.groupby("School / Department",
 actual_acceptances = test_department_records["Number of Acceptances"].tolist()                                                                       
                                                                        
 # Create a list to store the predictions from the model 
-predicted_acceptances = [68,7,42,274,68,11,59,92,233,4,201,2228,323,105,180,347]
+predicted_acceptances = [62,0,32,113,65,10,84,186,176,6,114,2758,338,96,185,154]
 
 # Calculate Root Mean Squared Error
 rmse = np.sqrt(mean_squared_error(actual_acceptances, predicted_acceptances))
