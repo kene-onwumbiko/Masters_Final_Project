@@ -532,7 +532,7 @@ new_final_records["Department_Date"] = new_final_records["School / Department"] 
 department_date_values = new_final_records["Department_Date"].unique()
 
 # Split the unique values for training and testing
-train_values, test_values = train_test_split(department_date_values, test_size = 0.5, random_state = 42)
+train_values, test_values = train_test_split(department_date_values, test_size = 0.5, random_state = 10)
 
 # Filter the new_final_records to create training and testing datasets based on the unique values
 train_new_final_records = new_final_records[new_final_records["Department_Date"].isin(train_values)]
