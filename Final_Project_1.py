@@ -377,6 +377,28 @@ def get_main_level(row):
 # Apply the function to the final_records dataset
 final_records = final_records.apply(get_main_level, axis = 1)
 
+# Create a function to modify the School / Department column
+def modify_school_department(row):
+    school_department = row["School / Department"]
+    if school_department == "History and History of Art":
+        row["School / Department"] = "History"
+    elif school_department == "School of Computing":
+        row["School / Department"] = "Computing"
+    elif school_department == "School of Education":
+        row["School / Department"] = "Education"
+    elif school_department == "School of Law":
+        row["School / Department"] = "Law"
+    elif school_department == "School of PG Medicine":
+        row["School / Department"] = "PG Medicine"
+    elif school_department == "School of Psychology":
+        row["School / Department"] = "Psychology"
+    elif school_department == "School of UG Medicine":
+        row["School / Department"] = "UG Medicine"
+    return row
+
+# Apply the function to the final_records dataset
+final_records = final_records.apply(modify_school_department, axis = 1)
+
 # Save to a CSV file
 final_records.to_csv(r'final_records.csv', index = False)
 
@@ -478,8 +500,11 @@ final_registrations[["Month", "Year"]] = final_registrations["Date"].str.split("
 final_registrations["School / Department"] = final_registrations["School / Department"].replace("School of Postgraduate Medicine", 
                                                                                                 "School of PG Medicine")
 
-# Apply the get_main_level function to the final_registration dataset
+# Apply the get_main_level function to the final_registrations dataset
 final_registrations = final_registrations.apply(get_main_level, axis = 1)
+
+# Apply the modify_school_department function to the final_registrations dataset
+final_registrations = final_registrations.apply(modify_school_department, axis = 1)
 
 # Save to a CSV file
 final_registrations.to_csv(r'final_registrations.csv', index = False)
