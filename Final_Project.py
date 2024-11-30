@@ -10,6 +10,8 @@ import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error, r2_score
+from sklearn.preprocessing import MinMaxScaler
+from sklearn.compose import ColumnTransformer
 
 
 
@@ -568,7 +570,7 @@ train_new_final_records = train_new_final_records.drop(columns = ["Department_Da
 test_new_final_records = test_new_final_records.drop(columns = ["Department_Date"])
 
 # Save the training data to a CSV file
-train_new_final_records.to_csv(r'train_new_final_records.csv', index = False)
+train_new_final_records.to_csv(r"train_new_final_records.csv", index = False)
 
 
 
