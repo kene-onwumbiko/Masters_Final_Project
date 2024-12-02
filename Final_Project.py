@@ -9,7 +9,7 @@ Created on Sun May 26 14:55:26 2024
 import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import mean_squared_error, r2_score
+from sklearn.metrics import mean_squared_error
 
 
 
@@ -585,17 +585,13 @@ test_department_records = test_new_final_records.groupby("School / Department",
 actual_acceptances = test_department_records["Number of Acceptances"].tolist()                                                                       
                                                                        
 # Create a list to store the predictions from the model 
-predicted_acceptances = [62,0,32,113,65,10,84,186,176,6,114,2758,338,96,185,154]
+predicted_acceptances = [62,0,32,184,199,1061,92,18,41,192,77,392,6,96,185,154]
 
 # Calculate Root Mean Squared Error
 rmse = np.sqrt(mean_squared_error(actual_acceptances, predicted_acceptances))
 
-# Calculate R2 score
-r2 = r2_score(actual_acceptances, predicted_acceptances)
-
-# Print the Root Mean Squared Error and R2 score
+# Print the Root Mean Squared Error
 print(f"Root Mean Squared Error: {rmse}")
-print(f"R2 Score: {r2}")
 
 
 
